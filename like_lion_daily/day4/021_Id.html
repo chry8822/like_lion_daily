@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ID</title>
+    <style>
+      #one {
+        color: royalblue;
+        font-weight:lighter;
+      }
+      #two {
+        display: inline;
+        border: 1px solid black;
+        border-top:10px solid red;
+      }
+      #three {
+        font-size: 48px;
+      }
+    </style>
+</head>
+<body>
+  <!-- 
+    1. Id 는 중첩해서 사용할수 없다.
+         반면 class 는 중첩해서 사용할수 있다.
+
+      2.page내 id는 여러개 존재할수 없다.
+          반면 class 는 여러개 존재할수 있다.
+  -->
+
+  <a href=""></a>
+  <h1 id="one">hello world</h1>
+  <h1 id="two">hello world</h1>
+  <h1 id="three">hello world</h1>
+  <h1>hello world</h1>
+  <h1 id="one">hello world</h1>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 크기 단위</title>
+    <style>
+      html, body{
+        font-size: 10px;
+      }
+      p{
+        font-size: 3em;
+        font-weight: 900;
+      }
+
+      div {
+        font-size: 2em;
+      }
+      .one {
+        font-size: 2rem;
+      }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <p>hello world</p>
+
+
+      <!-- em의 작동 방식 (중첩 태그 일때) -->
+    <div>
+      <!-- 10px- * 2 = 20px -->
+      <div>
+         <!-- 20px- * 2 = 40px -->
+        <div>
+           <!-- 40px- * 2 = 80px -->
+          hello world
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- *rem 은 html 의 사이즈를 따르므로 html 폰트 사이즈를
+    따로 지정하지 않으면 기본값 16px 을 기준으로 작동한다.  -->
+
+    <div>    
+      <div>        
+        <div class="one">           
+          hello world
+        </div>
+      </div>
+    </div>
+
+
+    <!-- em, %, rem, vw, vh -->
+    <!--
+      em 은 부모 px 사이즈의 배수로 지정된다
+      예) 2em 은 기본사이즈 16px의 2배인 32px 이다.
+      
+      -->
+    
+</body>
+</html>

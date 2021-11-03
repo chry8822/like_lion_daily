@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헷갈리는 선택자</title>
+    <style>
+        /*
+        하나의 class 에서 두개의 이름을 가진 클래스는
+        .one.two 두개의 클래스명을 띄어쓰기 없이 쓴다.
+        <div class="one two"> - 해당클래스 선택. 
+         */
+      .one.two {
+        color: red;
+      }
+      
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+        해당 클래스 명을 가진 div 를 만듬
+        .one
+        .one.two
+        .one>.two
+     -->
+    <div class="one">hello world</div>
+    <div class="one two">hello world</div>
+    <div class="one">
+        <div class="two">hello world</div>
+    </div>
+</body>
+</html>

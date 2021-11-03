@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재미있는거</title>
+    <style>
+        /*
+        가상 요소 선택자 :hover 를 사용해서 
+        인터렉티브한 화면 구성을 할수있다.
+        
+        */
+
+      div {
+        width: 500px;
+        height: 500px;
+        background: brown;
+        transition: all .10s;
+        
+      }
+      div:hover {
+        border-radius: 300px;
+        width: 600px;
+        height: 600px;
+        background: burlywood;
+        transform: translateX(100px) translateY(30px) rotate(200deg);
+        
+      }
+    </style>
+</head>
+<body>
+    <div></div>    
+</body>
+</html>
