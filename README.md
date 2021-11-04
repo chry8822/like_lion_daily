@@ -1,3 +1,4 @@
+
 # like_lion_daily
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a> 
@@ -58,4 +59,9 @@ button 태그의 속성들중에 submit 속성이 어떻게 작동하는지.
 * float - 뜨다.띄우다 라는 의미의 property 로 요소가 일반적인 흐름에서 제외되게 만들어준다.
 * HTML 과 CSS 만을 사용하여 캐릭터 만들어보기 과제
 
+<br>
 
+## 결과물 Angry rabbit
+
+
+<img src="https://user-images.githubusercontent.com/89508217/140319011-246a7297-1386-486f-b081-a3f03eee6e3c.jpg" width="300" >
