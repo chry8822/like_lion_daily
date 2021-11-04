@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .one {
+            border: 5px  solid rgb(19, 28, 105);
+            border-radius: 30px;
+            background: chocolate;
+            width: 200px;
+            height: 100px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 80px;
+            color: white;
+            font-size: 28px;
+            transition: all 1s;
+        }
+        .one:hover {
+            background: rgb(19, 28, 105) ; 
+            transform: translate(20px, 50px);
+        }
+        .push:hover {
+            transform: rotate(90deg) scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="one2"></div>
+        <span class="push">눌 럿!</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="two">눌 럿!</div>
+</body>
+</html>
