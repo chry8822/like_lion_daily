@@ -65,3 +65,26 @@ button 태그의 속성들중에 submit 속성이 어떻게 작동하는지.
 
 
 <img src="https://user-images.githubusercontent.com/89508217/140319011-246a7297-1386-486f-b081-a3f03eee6e3c.jpg" width="300" >
+
+
+<br>
+<br>
+<br>
+
+### 6일차
+
+
+<br>
+
+## 결과물 Naver login UI
+
+![네이버 로그인 페이지 제작](https://user-images.githubusercontent.com/89508217/140617049-5ef80333-fae1-425b-939f-bf90df4a4593.jpg)
+
+<br>
+
+ *처음 수업시간에 만들었을때는 마크업부터 너무 많이 요소들의 구조를 나눠서 복잡하고 코드도 길었고, css의 개념이 뒤죽박죽 이어서 position 없이 float만 사용해서 하고싶었는데
+float을 제대로 사용하지 못해서 결과물이 안나오지 position까지 써가면서 했지만 실패 했다.
+그 후에 수업을 마치고 다른분들의 코드리뷰 와 강사님의 코드를 그리고 네이버등을 참고해서 float과 가상요소를 사용해서 만들었는데 아직도 마음에 들게 코드를 써서 만든건 아니다.
+나중에 좀더 공부후에 다시 한번 만들 계획.*
+
+<br>
