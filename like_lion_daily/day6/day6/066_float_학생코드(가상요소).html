@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상자 만들기</title>
+    <style>
+        #Top {
+            width: 300px;
+            height: 100px;           
+            background-color: skyblue;
+        }
+     
+
+        .f1::after {
+            display: block;
+            float: left;
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        .f1::before {
+            display: block;
+            float: left;
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+
+        .item-middle {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+
+
+        #footer {
+            clear: both;
+            background-color: yellow;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Top"></div>
+    <div id="content" class="f1">
+        <div class="item-middle"></div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>

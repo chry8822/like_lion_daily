@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+
+
+
+      /* 
+      
+      float 특징
+      부모가 float 된 자식 요소를 못알아본다.
+      overflow hidden은 부모가 자식이 float가 된지 알게 하는것이다.
+
+      부모요소에 
+      display inline-block
+      overflow : hidden
+
+
+         .clear-fix::after {
+        display: block;
+        content:'';      
+        clear: both;
+      }
+
+
+
+        -clear-fix 의 방식
+        현업에서는 클래스를 만들어서 원하는 부모요소에 클래스로 적용한다.
+        ::after content: '':  - display:block ( after 가상요소는 기본적으로 인라인
+        가장 마지막 자식으로 가상요소 생성
+
+        마지막 자식을 부모가 플롯인걸 알아보면 자기 자리를 다시 제대로 인식한다.
+
+        before/ after  가상 자식 만들기.
+        after 은 가상 자식 요소 를 부모에 마지막에 만들어 준다.
+        before 는 가상 자식 요소를 부모에 첫번째에 만들어 준다.
+
+  
+      
+      
+      
+      
+      
+      */
+
+
+
+
+
+
+      ul {      
+        
+      }
+
+      /* clear-fix */
+     .clear-fix::after {
+        display: table;
+        content:'';
+        clear: both;
+      }
+
+      li {
+        float: left;
+        width: 300px;
+        height: 100px;
+        background: pink;
+      }
+      /* li:nth-child(2) {
+        float: left;
+      }
+      */
+     
+    </style>
+</head>
+<body>
+    <ul class="clear-fix">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</body>
+</html>

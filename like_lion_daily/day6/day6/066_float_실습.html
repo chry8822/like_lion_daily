@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 실습</title>
+    <style>
+      ul{
+        list-style: none;
+      }
+
+      /* ul::after {
+        display: block;
+        content: '';
+        clear: both;
+      } */
+      li:nth-child(n+2):nth-child(-n+4) {
+        float: left;
+      }
+         
+      li:nth-child(1) {       
+        width: 300px;
+        height: 80px;
+        background: blue;
+      }
+      li:nth-child(2) {
+        /* float: left; */
+        width: 100px;
+        height: 140px;
+        background: green;
+      }
+      li:nth-child(3) {
+        /* float: left; */
+        width: 100px;
+        height: 140px;
+        background: red;
+      }
+      li:nth-child(4) {
+        /* float: left; */
+        width: 100px;
+        height: 140px;
+        background: purple;
+      }
+      
+      li:nth-child(5) { 
+        clear: both;
+        width: 300px;
+        height: 80px;
+        background: yellow;
+      }
+
+    </style>
+</head>
+<body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</body>
+</html>
