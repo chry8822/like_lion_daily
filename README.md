@@ -109,4 +109,50 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <br>
 <br>
 
+### 8일차
+
+<br>
+<br>
+##  건물올리기 (animation)
+
+[ 건물올리기.GIF ](https://chry8822.github.io/like_lion_daily/like_lion_daily/day8/092%EA%B1%B4%EB%AC%BC%EC%98%AC%EB%A6%AC%EA%B8%B0.html)
+
+<br>
+
+![Animation1](https://user-images.githubusercontent.com/89508217/140920117-ca52f1d6-443b-47ef-9f73-af112b9e0b93.gif)
+
+<br>
+수업 내용에서 건물들어 몇게 더 추가해서 만들어 보았다.(그림파일은 만들어진걸 사용)
+<br>
+<br>
+<br>
+
+* svg - 벡터 이미지로 깨지지 않고 css와 Js 로 컨트롤이 가능하다. 보통 단순 아이콘 로고등에 사용 css 로 캐릭터 만들기와 느낌이 비슷한다 뭔가 다른 좀더 어려운 느낌이다.
+* hover_avtive_focus 마우스 오버,활성화,포커스 상태에서 다른 효과나 스타일을 바꿔줄수 있는 유용한 속성들이다.
+* transition, transform - 해당 속성으로 애니메이션과 같은 다양한 효과를 줄수있다. 
+* animation 예전에 잠깐 언급된 후에 다시 들었는데 아직 사용법이 익숙하지않고 어렵게 느껴진다, 활용하면 3d나 2d 애니메이션등 많은 것들을 할수 있을거 같다.  
+* perspective(원근) 위에 애니메이션에 활용하면 효과가 극대화 되며 3d처럼 표현도 가능하다. px 이 작을수록 컨텐츠는 더 극대화 되는거 처럼 보인다.
+* 애니메이션,원근,SVG 가지고 놀기 실습
+
+<br>
+
+원래 SVG 이미지
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/89508217/140921805-39919751-29ab-402d-9189-364ebda6a9d5.jpg" width="200px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+<br/>
+
+## 수정해본 이미지
+
+<br/>
+
+<img src="https://user-images.githubusercontent.com/89508217/140922253-a80f6454-c54f-4e82-aa13-8d3808dc0d09.jpg" width="400px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+<br/>
+
+
+
+
 
