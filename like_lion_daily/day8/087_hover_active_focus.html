@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover_active_focus</title>
+    <style>
+      .one {
+        background-color: blueviolet;
+        width: 100px;
+        height: 100px;
+        transition: all f 1s;
+      }
+      .one:hover {
+        background: url(../../unknown.png);
+        width: 200px;
+        height: 200px;
+      }
+      .btn {
+        font-size: 16px;
+        border: 4px dotted rgb(19, 90, 138);
+        border-radius: 4px;
+        padding: 10px 10px;
+        background: none;
+        color:rgb(19, 90, 138);
+        transition: all 0.01s;
+      }
+      .btn:active {
+        background-color:rgb(45, 153, 117) ;
+        color: whitesmoke;
+        padding: 20px 30px;
+        font-size: 32px;
+        border: 8px solid  rgb(19, 90, 138);
+      }
+      .box {
+        transition: all 0.5s;
+      }
+      .box:focus {
+        background: grey;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+<body>
+    <div class="one"></div>
+    <input type="text" class="box" placeholder="click here!">
+    <button class="btn">Click me!!</button>
+</body>
+</html>

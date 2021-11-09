@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+   <style>
+      @keyframes hojun {
+        from{
+          background-position: 0px, 0px;
+        }
+        to {
+          background-position: -3730px, 0;
+        }
+      }
+
+      @keyframes two {
+        from{
+          background-position: 0px, 0px;
+        }
+        to {
+          background-position: -5346px, 0;
+        }
+      }
+
+      .wrap {
+        float: left;
+        margin-left: 200px;
+        margin-top: 100px;
+        width: 100%;
+        height: 100px;
+        background-color: transparent;
+      }
+
+      .building1 {
+        
+        float: left;
+        width: 110px;
+        height: 180px;
+        background: url(./building/building1.png) no-repeat;
+        animation: hojun 3s steps(33);
+        animation-fill-mode: forwards;
+      }
+
+      .building2{
+        float: left;
+        width: 165px;
+        height: 180px;
+        background: url(./building/building2.png) no-repeat;
+        animation: two 3s steps(32);
+        animation-fill-mode: forwards;
+        /* transform: translate(300px, 10px); */
+      }
+
+      .building3 {
+       
+        float: left;
+        width: 110px;
+        height: 180px;
+        background: url(./building/building1.png) no-repeat;
+        transform: scale(2);
+        animation: hojun 3s steps(33);
+        animation-fill-mode: forwards;
+      }
+      .building6 {
+       
+        float: left;
+       width: 110px;
+       height: 180px;
+       background: url(./building/building1.png) no-repeat;
+       transform: scale(2);
+       animation: hojun 3s steps(33);
+       animation-fill-mode: forwards;
+     }
+     .building7{
+        clear: both;
+        width: 165px;
+        height: 180px;
+        background: url(./building/building2.png) no-repeat;
+        animation: two 3s steps(32);
+        transform: scale(2);
+        animation-fill-mode: forwards;
+        /* transform: translate(300px, 10px); */
+      }
+   </style>
+</head>
+<body>
+
+ <div class="wrap">
+    <div class="building1"></div>
+    <div class="building2"></div>
+    <div class="building2"></div>
+    <div class="building1"></div>
+    <div class="building6"></div>
+    <div class="building7"></div>
+ </div>
+</body>
+</html>
