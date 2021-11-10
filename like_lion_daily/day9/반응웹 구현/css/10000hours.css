@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    font-family: 'GmarketSansMedium';
+    background-color: #5B2386;
+    color: #FFF;
+}
+section {
+    font-size: 20px;
+}
+
+
+.scr_out{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+} 
+header {   
+    width: 100%;
+    height: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tit_imgs {
+    
+    display: flex;
+    /* top: 0;
+    left: 50%;
+    transform: translateX(-50%); */
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loading {    
+    position: relative;
+    width: 225px;
+    height: 225px;
+    opacity: 0.15; 
+    margin: 20px;
+}
+
+.main_img {    
+    position: absolute;   
+    width: 100%;
+    height: auto;    
+}
+.main_img img{
+    width: 536px;
+}
+
+.main_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.int {
+    width: 100%;
+    height: 100%;
+    text-align: center;   
+    margin-bottom: 50px;
+    
+}
+
+.int_say {    
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #F5DF4D;
+    margin-bottom: 50px;
+    
+
+}
+
+.explain_wrap{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin-bottom: 80px;
+
+}
+
+.tit_imgs {
+    
+    margin-bottom:50px ;
+}
+
+.tit_img {
+   padding-top: 20px;
+}
+
+.explain {
+    position: absolute;
+    font-size: 17px;
+    line-height: 1.7;
+    
+}
+
+.explain .bold {
+    font-family: 'GmarketSansBold' ;
+    font-size: 20px;
+}
+
+.input_j, .input_t {
+    font-family: 'GmarketSansMedium' ;
+    box-sizing: border-box;
+    color: #eeeeee;
+    margin: 0 15px;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: 228px;
+    border-radius: 10px;
+    border: none;
+   
+}
+
+.input_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input_t_wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 115px;
+}
+
+.result {
+    display: flex;   
+    align-items: center;
+    margin-bottom: 80px;
+}
+             
+.resultBtn {
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+    line-height: 20px;
+    color: #5B2386;
+    /* width: 565px;
+    height: 66px; */
+    border-radius: 30px;
+    background-color: #F5DF4D;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    /* margin-left: 60px;    */
+}
+.msg_wrap {  
+    display: flex;   
+    flex-direction: column;
+}
+.msg_wrap .highlight {
+    font-size: 70px;
+    font-family: 'GmarketSansBold';   
+    margin: 0 20px;
+
+}
+.msg_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+.msg_btm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result> img {
+    margin-left: 15px;
+}
+
+.result_msg {
+    margin-bottom: 80px;
+}
+
+.resultBtn.share{
+   margin-left: 20px;
+   background-color: #FFF;
+}
+.btn_wrap {
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+    
+}
+
+.footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.footer .copy {
+    font-size: 10px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+/* 이런식으로 대츙 767 이하일때는 어떻게 추가적으로 보여라 라고 해주면됨 767 이하일때 기존 css속성+ 아래 추가로 정의한게 같이 먹는거임 동일한 속성이면 당연히 아래꺼 우선됨 */
+
+@media (max-width: 767px) {
+    header {
+        height: 240px;
+        margin-bottom: 20px;
+    }
+    .tit_imgs{
+        margin: 20px;
+    }
+    .main_img{
+        width: 430px;
+        
+    }
+    .main_img img {        
+        width: 100%;
+        height: auto;    
+    }
+
+    .loading {
+        width: 160px;
+        height: 160px;
+    }
+    .int {
+        margin-bottom: 20px;
+    }
+
+    .sm {
+        position: relative;
+    }
+    .sm-margin-top {
+        margin-top: 0;
+    }
+    .resultBtn {
+        
+        width: 300px;
+        line-height: 1.5; 
+        font-size: 18px;    
+        padding: 10px 40px;   
+    }
+    .border-sm {
+        border-radius: 20px;
+    }
+    .input_t_wrap {
+        flex-direction: column;
+        margin-bottom: 49px;
+    }
+    .input_t_wrap .sm-margin-top {
+        margin: 0 20px 20px 20px;
+    }
+
+    .msg_wrap .highlight {
+        font-size: 30px;
+        margin: 0 10px;
+    }
+    .better {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .font-sm {
+        font-size: 18px;
+    }
+    .explain .bold .font-m {
+        font-size: 18px 
+    }
+
+    .hand{
+        position: absolute;
+        top: 27px;
+        left: 305px;
+    }
+    .click {
+        width: 53px;
+        height: 58px;
+    }
+    .share {
+        width: 160px;
+    }
+    .result_msg {
+        margin-bottom: 60px;
+    }
+
+}
+
