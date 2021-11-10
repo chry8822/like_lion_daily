@@ -151,8 +151,41 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <img src="https://user-images.githubusercontent.com/89508217/140922253-a80f6454-c54f-4e82-aa13-8d3808dc0d09.jpg" width="400px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 
 <br/>
+<br/>
+<br/>
+
+### 8일차
+
+<br/>
+<br/>
+
+* animation 으로 카드 뒤집기 -perspective 와 animation 을 사용해서 만들어보기
+* button 다양한 속석을 이용하여 버튼만들어 보기 -translate, translateX, translateY, rotate, skew, scale , transition-timing-function
+* button 실습 속성들을 사용하여 버튼 만들어보기.
+* 미디어 쿼리의 이해와 속성들 사용하기
+* 그라데이션 컬러 사용하기 
+* 미디어쿼리를 사용하여 반응형 웹 만들기.
 
 
+<br/>
+<br/>
 
+버튼 실습 결과물 
+<br/>
+버전1
 
+<br/>
+
+![버튼](https://user-images.githubusercontent.com/89508217/141212114-9730ab6a-29c4-43bd-9c30-89f3b9dc8116.gif)
+
+<br/>
+
+버전2
+
+<br/>
+
+![버튼2]
+<img src="https://user-images.githubusercontent.com/89508217/141212155-6eed361f-5c33-44cc-a14e-14feed44ceb3.gif" width="386px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+<br/>
 
