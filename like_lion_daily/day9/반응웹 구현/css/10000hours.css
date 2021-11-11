@@ -149,7 +149,7 @@ header {
 .input_j, .input_t {
     font-family: 'GmarketSansMedium' ;
     box-sizing: border-box;
-    color: #eeeeee;
+    color: #252525;
     margin: 0 15px;
     font-size: 20px;
     padding: 15px 20px;
@@ -250,6 +250,9 @@ header {
 /* 이런식으로 대츙 767 이하일때는 어떻게 추가적으로 보여라 라고 해주면됨 767 이하일때 기존 css속성+ 아래 추가로 정의한게 같이 먹는거임 동일한 속성이면 당연히 아래꺼 우선됨 */
 
 @media (max-width: 767px) {
+    html {
+        transform: scale(0.7);
+    }
     header {
         height: 240px;
         margin-bottom: 20px;
