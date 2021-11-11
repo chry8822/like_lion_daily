@@ -184,9 +184,6 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 
 <br/>
 
-버튼2
-<br/>
-
 <img src="https://user-images.githubusercontent.com/89508217/141212155-6eed361f-5c33-44cc-a14e-14feed44ceb3.gif" width="386px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 
 <br/>
