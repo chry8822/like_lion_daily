@@ -188,4 +188,12 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <img src="https://user-images.githubusercontent.com/89508217/141212155-6eed361f-5c33-44cc-a14e-14feed44ceb3.gif" width="386px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 
 <br/>
+반응형웹
+<br/>
+max-width: 767px
+<br/>
+
+[링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day9/반응형웹구현.html)
+
+
 
