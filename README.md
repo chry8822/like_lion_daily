@@ -194,5 +194,14 @@ max-width: 767px
 
 [링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day9/반응형웹구현.html)
 
+<br/>
+<br/>
+
+### 10일차
+
+<br/>
+
+* 미디어쿼리 ratio 알아보기. PPI 과 DPI ratio 에 따른 화면에서 보여지는 픽셀의 변화.
+* 1만시간의 법칙 강사님과 함께 코딩해보기 HTML , CSS 그리고 미디어쿼리 작업
 
 
