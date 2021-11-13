@@ -1,8 +1,9 @@
-/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css); */
+@import url(./SpoqaHanSansNeo_OTF_original/SpoqaHanSansNeo-Medium.otf);
 
 html body {
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  
+  font-family: 'SpoqaHanSansNeo-Medium', 'sans-serif';
+  letter-spacing: -1px;
+  font-weight: 500;  
 }
 button {
   cursor: pointer;
@@ -13,22 +14,43 @@ button {
   width: 520px;
   border: 1px solid #C4C4C4;
   border-radius:10px ;
+  padding-bottom: 14px;
+  margin:80px 0 0 80px ;
 }
 .top-close {  
-  display: flex;    
-  align-items: center;
-  justify-content:center ;
-  border-bottom: 1px solid#C4C4C4 ;
+  position: relative;
+  width: 520px ;
+  height: 58px;
+  
 }
-.top-close p {
+.top-close .top-txt {
+  position: absolute;
   font-size: 16px;
+  font-weight: 600;
   padding: 20px 0px 20px 0px;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.top-close::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  border-bottom: 1px solid#C4C4C4 ;
+
+}
+
 .top-close .close {
   display: flex;  
   align-items: flex-end;
   justify-content: center;
-  position: relative;
+  top: 22px;
+  right: 24px;
+  position: absolute;
   overflow: hidden;
   width: 19px;
   height: 19px;   
@@ -46,9 +68,9 @@ button {
   padding:0 24px ;
 }
 .user-input .msg {
-  font-size: 20px;
-  font-weight: 500;
-  padding: 26px 0 24px 0 ;
+  font-size: 20px;  
+  font-weight: bold;  
+  padding: 27px 0 25px 0 ;
 }
 .user-input .inp-id, .user-input .inp-pw  {
   font-size: 16px ;
@@ -74,8 +96,10 @@ button {
   width: 520px;
 }
 .keep-txt {
+  color: #767676;
   font-size: 16px ;
   margin-left: 8px;
+  font-weight: 400;
 }
 
 /* 체크박스 */
@@ -90,19 +114,22 @@ input[type="checkbox"] + label {
   border: 1px solid #767676;
   cursor: pointer;
   border-radius: 100%;  
+  background: url(./img/Vector.png) no-repeat;
+  background-position:center; 
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 input[id="check"]:checked + label::before {  
   content: '';
-  width: 22px;
-  height: 22px;  
+  display: block;
+  float: left;
+  transform: translate(-15%,-14%);
+  width: 142%;
+  height: 131%;
   border: none;
-  position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: tomato;
+  background: url(./img/화면\ 캡처\ 2021-11-12\ 195930.png) no-repeat;
+  background-position: center;
+  background-size: cover;
   
 }
 
@@ -122,16 +149,14 @@ input[id="check"]:checked + label::before {
 .join-find {
   display: flex;
   justify-content: center;
-  height: 18px;
   font-size: 14px;
   margin-bottom: 30px;
-  overflow: hidden;
- 
-  
- 
+  overflow: hidden; 
+}
+.join-find a {
+  color: #767676;
 }
 .user-join::after {
-  
   float: right;
   content: "";
   top: 1px;
@@ -169,15 +194,46 @@ input[id="check"]:checked + label::before {
   align-items: center; 
 }
 .other-btn .btn{
-  display: flex;   
+  position: relative;
   font-size: 16px;
   width: 472px;    
-  padding: 11px 0;
+  height: 50px;
+  color: #767676;
+  font-weight: 600;
   margin-bottom: 10px;
-  border-radius: 5px;
-  align-items: center;
+  border-radius: 5px;  
   border: 1px solid #767676;
 }
-.other-btn a {
- 
+
+.other-btn .log-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;  
+  text-align:center ;  
+  vertical-align: middle;
+  
+  
+}
+.other-btn img {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  margin-left: 12px ;  
+}
+
+.other-btn .face{
+  border-color: #2D9CDB;
+  
+}
+.other-btn .naver{
+  border-color: #00BF18;
+  
+}
+.other-btn .kao{
+  border-color:#F2C94C;
+  
 }
