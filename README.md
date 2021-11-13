@@ -231,6 +231,24 @@ max-width: 767px
 
 ## 로그인 박스
 <br/>
+<br/>
+
+* 과제로 나온 로그인 팝업창과 로그인 모달창으로 팝업창에서 로그인을 누를시 모달창으로 넘어가고 모달창은 max-width:700px 로 미디어 쿼리로 작아지게 작업했다.
+* 작아지는 창의 기준은 없어서 그냥 마음대로 배치하고 내기준으로 봤을때 알맞게 사이즈를 조절해서 작업했다.
+* 모달 하단창에 다른계정 로그인은 처음에 버튼 안에 이미지와 a태그로 링크를 걸었다가 후에 그냥 a태그 안에 img 태그와 텍스트를 넣어서 작업하고 커서를 줬다.
+* 로그인 상태 유지 체크박스는 기본 체크 박스를 display:none 으로 안보이게 하고 속성 선택자 + label 그리고 속성 선택자 + lable::before 를 사용해서 다른 디자인으로 다시 만들었다.
+
+
+<br/>
+
+[로그인 팝업 링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day11/day11/Modalpop.html)
+
+<br/>
+
+![팝업](https://user-images.githubusercontent.com/89508217/141625182-e5b96022-336c-4372-8c4e-323a493055e2.png)
+
+<br/>
+<br/>
 
 [로그인 박스 링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day11/day11/Modal.html)
 
