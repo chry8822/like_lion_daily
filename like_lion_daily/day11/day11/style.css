@@ -1,8 +1,13 @@
-@import url(./SpoqaHanSansNeo_OTF_original/SpoqaHanSansNeo-Medium.otf);
+@font-face {
+  font-family:"weniv" ;
+  src: url(./SpoqaHanSansNeo_OTF_original/SpoqaHanSansNeo-Medium.otf);
+
+  font-family:"weniv2";
+  src: url(./SpoqaHanSansNeo_OTF_original/SpoqaHanSansNeo-Regular.otf); ;
+}
 
 html body {
-  font-family: 'SpoqaHanSansNeo-Medium', 'sans-serif';
-  letter-spacing: -1px;
+  font-family: 'weniv2';
   font-weight: 500;  
 }
 button {
@@ -99,7 +104,7 @@ button {
   color: #767676;
   font-size: 16px ;
   margin-left: 8px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* 체크박스 */
@@ -151,6 +156,7 @@ input[id="check"]:checked + label::before {
   font-size: 14px;
   margin-bottom: 30px;
   overflow: hidden; 
+  font-family: "weniv";
 }
 .join-find a {
   color: #767676;
@@ -168,6 +174,7 @@ input[id="check"]:checked + label::before {
   color: #767676;
   font-size: 14px;
   text-align: center;  
+  font-family: "weniv"; 
 }
 
 .log-other::after ,.log-other::before {
@@ -223,6 +230,9 @@ input[id="check"]:checked + label::before {
   transform: translateY(-50%);
   vertical-align: middle;
   margin-left: 12px ;  
+}
+.other-btn .glg {
+  border-color: #767676 ;
 }
 
 .other-btn .face{
