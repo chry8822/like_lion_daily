@@ -1,0 +1,183 @@
+/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css); */
+
+html body {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  
+}
+button {
+  cursor: pointer;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  border: 1px solid #C4C4C4;
+  border-radius:10px ;
+}
+.top-close {  
+  display: flex;    
+  align-items: center;
+  justify-content:center ;
+  border-bottom: 1px solid#C4C4C4 ;
+}
+.top-close p {
+  font-size: 16px;
+  padding: 20px 0px 20px 0px;
+  }
+.top-close .close {
+  display: flex;  
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 19px;
+  height: 19px;   
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.top-close .close img {
+  position: absolute;
+  top: 0;
+}
+.user-input {
+  display: flex;
+  flex-direction: column;  
+  padding:0 24px ;
+}
+.user-input .msg {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 26px 0 24px 0 ;
+}
+.user-input .inp-id, .user-input .inp-pw  {
+  font-size: 16px ;
+  width: 472px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.user-input .inp-id {
+  margin-bottom:10px ;
+}
+.user-input .inp-pw {
+  margin-bottom:16px ;
+}
+.user-input .check-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 21px;
+  width: 520px;
+}
+.keep-txt {
+  font-size: 16px ;
+  margin-left: 8px;
+}
+
+/* 체크박스 */
+
+input[type='checkbox']{
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 22px;
+  height: 22px;  
+  border: 1px solid #767676;
+  cursor: pointer;
+  border-radius: 100%;  
+  position: relative;
+  overflow: hidden;
+}
+input[id="check"]:checked + label::before {  
+  content: '';
+  width: 22px;
+  height: 22px;  
+  border: none;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: tomato;
+  
+}
+
+/* 체크박스 */
+
+.log-btn {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 0;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f80ed;
+  color: #FFF;
+  cursor: pointer;
+}
+.join-find {
+  display: flex;
+  justify-content: center;
+  height: 18px;
+  font-size: 14px;
+  margin-bottom: 30px;
+  overflow: hidden;
+ 
+  
+ 
+}
+.user-join::after {
+  
+  float: right;
+  content: "";
+  top: 1px;
+  width: 1px;
+  height: 14px;
+  background-color: black;
+  margin:0 12px ;
+} 
+.log-other {
+  font-size: 14px;
+  text-align: center;  
+}
+
+.log-other::after ,.log-other::before {
+  content: "";
+  float: right;
+  width: 210px;
+  height: 2px;
+  margin-top: 7px;
+  margin-bottom: 29px;
+  background: url(./img/가로선.png);  
+}
+.log-other::after {
+  background: url(./img/가로선.png); 
+  float: right;
+}
+
+.log-other::before { 
+  float: left; 
+  background: url(./img/가로선.png);
+}
+.other-btn {
+  display:flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.other-btn .btn{
+  display: flex;   
+  font-size: 16px;
+  width: 472px;    
+  padding: 11px 0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  align-items: center;
+  border: 1px solid #767676;
+}
+.other-btn a {
+ 
+}
