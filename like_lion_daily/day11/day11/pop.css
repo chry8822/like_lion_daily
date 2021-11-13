@@ -45,3 +45,25 @@
   background-color: #2f80ed;
   border-radius: 5px;
 }
+
+@media screen and (max-width:800px) {
+  #app{
+    width: 300px;
+    height: 160px;
+    padding: 20px 10px 10px 10px;
+  }
+  .pop-logo{
+    width: 100px;
+    height: auto;
+    margin-bottom: 14px;
+  }
+  .pop-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .pop-wrap .log-link {
+    font-size: 16px;
+    height: 40px;
+    line-height: 2.5;
+  }
+}

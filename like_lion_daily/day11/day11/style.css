@@ -251,6 +251,7 @@ input[id="check"]:checked + label::before {
   
    #app{
      width:350px ;
+     margin: 0 auto;
   }  
   .top-close {
     width:100%;
