@@ -204,4 +204,35 @@ max-width: 767px
 * 미디어쿼리 ratio 알아보기. PPI 과 DPI ratio 에 따른 화면에서 보여지는 픽셀의 변화.
 * 1만시간의 법칙 강사님과 함께 코딩해보기 HTML , CSS 그리고 미디어쿼리 작업
 
+<br/>
 
+[링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day10/day10/108_1%EB%A7%8C_%EA%B0%99%EC%9D%B4%EC%BD%94%EB%94%A9.html)
+
+<br/>
+<br/>
+
+### 11일차
+
+<br/>
+
+* smascss -기본 개념과 사용방법.  
+* bem -기본 개념과 사용방법. 
+* 로그인 모달창 과제.
+
+
+<br/>
+<br/>
+3개의 section 으로 나누어서 작업했고 기본적인 정렬은 flex 를 사용해서 했는데 css 를 하면 할수록 헷갈리는 부분들 때문에 시간이 예상보다 더많이 거렸다.. 가장 많이 시간이 걸린건 체크박스의 디자인을 변경하는건데 구글링을 해도 원하는 방법이 나오지 않아서 약간 트릭? 처럼 만들었는데 맞는 방법인지 확실하지가 않다.. 
+<br/>
+그리고 여기에 들어간 폰트를 웹에서 임포트 했는데 불러오는데 너무 오래 걸려서 다운받아서 경로에서 불러오는걸로 수정하였다.
+<br/>
+<br/>
+
+## 로그인 박스
+<br/>
+
+[로그인 박스 링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day11/day11/Modal.html)
+
+<br/>
+
+![모달창완성](https://user-images.githubusercontent.com/89508217/141609605-755a9db4-96b2-4640-81ac-da84919b9004.png)
