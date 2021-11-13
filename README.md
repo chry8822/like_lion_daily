@@ -154,7 +154,7 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <br/>
 <br/>
 
-### 8일차
+### 9일차
 
 <br/>
 <br/>
@@ -202,11 +202,12 @@ max-width: 767px
 <br/>
 
 * 미디어쿼리 ratio 알아보기. PPI 과 DPI ratio 에 따른 화면에서 보여지는 픽셀의 변화.
-* 1만시간의 법칙 강사님과 함께 코딩해보기 HTML , CSS 그리고 미디어쿼리 작업
+* 1만시간의 법칙 페이지를 강사님과 함께 코딩해보기 HTML , CSS 그리고 미디어쿼리 작업
+* (확실히 마크업 구조부터 간결하고 깔끔한 코드에 css 역시 필요한 부분들만 사용하고 같이들어가는 속성은 함께 묶어주며 빠르고 간결하게 완성되었다.) 
 
 <br/>
 
-[링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day10/day10/108_1%EB%A7%8C_%EA%B0%99%EC%9D%B4%EC%BD%94%EB%94%A9.html)
+[완성-링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day10/day10/108_1%EB%A7%8C_%EA%B0%99%EC%9D%B4%EC%BD%94%EB%94%A9.html)
 
 <br/>
 <br/>
