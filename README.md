@@ -239,6 +239,8 @@ max-width: 767px
 * 로그인 상태 유지 체크박스는 기본 체크 박스를 display:none 으로 안보이게 하고 속성 선택자 + label 그리고 속성 선택자 + lable::before 를 사용해서 다른 디자인으로 다시 만들었다.
 
 
+### 로그인 팝업에서 로그인 누를지 모달창으로 이동/ 모달창에서 닫기 누를시 다시 팝업창으로 이동 (21.11.14 수정)
+
 <br/>
 
 [로그인 팝업 링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day11/day11/Modalpop.html)
