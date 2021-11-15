@@ -257,3 +257,25 @@ max-width: 767px
 <br/>
 
 ![모달창완성](https://user-images.githubusercontent.com/89508217/141609605-755a9db4-96b2-4640-81ac-da84919b9004.png)
+
+<br/>
+<br/>
+<br/>
+
+### 12일차
+
+<br/>
+<br/>
+
+## flex 복습 수업, 메뉴만들기 실습, holy grail layout 실습
+
+<br/>
+<br/>
+
+* flex - 주요기능 복습 justity-content, align-items, flex-direction, flex-basis, flex-grow, flex-shrink 등
+* flex 를 이용하요 메뉴 실습하기. 
+* holy grail layout 실습하고 익숙해지기.
+
+<br/>
+<br/>
+
