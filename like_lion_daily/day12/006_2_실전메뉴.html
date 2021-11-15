@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 실전 예제</title>
+  <link rel="stylesheet" href="../../reset.css">
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <style>
+    /* reset */
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: all .5s;
+    }
+    /* style */
+    nav {
+      background-color: #222;
+      padding: 0 15px;
+    }
+    .logo{
+      font-size: 20px;
+      padding: 10px;
+    }
+    .item{
+      padding: 10px;
+    }
+    a:hover {
+      color: rgb(165, 165, 165);
+      transition: all .5s;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .menu li a {
+      display: block;
+      padding: 10px;
+    }
+    .menu li.subitem a {
+       padding-left: 20px;
+    }
+    .subitem {
+      /* display: none; */
+      display: block;
+    }
+    .icon {
+      /* 모바일 환경에서만 보여줌 */
+      display: none;
+    } 
+
+ 
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+      <li class="logo">
+        <a href="#none">Logo</a>
+      </li>
+      <li class="item">
+        <a href="#none">About Me</a>
+      </li>
+      <li class="item has-submenu">
+        <a href="#none">Skills</a>    
+      </li>
+      <li class="item">
+        <a href="#none">Blog</a>
+        <ul class="submenu">
+          <li class="subitem">
+            <a href="#none">HTML</a>
+          </li>
+          <li class="subitem">
+            <a href="#none">CSS</a>
+          </li>
+          <li class="subitem">
+            <a href="#none">JS</a>
+          </li>
+          <li class="subitem">
+            <a href="#none">INFRA</a>
+          </li>
+          <li class="subitem">
+            <a href="#none">NODE</a>
+          </li>
+        </ul>
+      </li>
+      <li class="item">
+        <a href="#none">CONTACT</a>
+      </li>
+      <li class="icon">
+        <a href="#none"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

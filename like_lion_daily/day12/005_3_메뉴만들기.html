@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+    
+</body><!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-1</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <style>
+      .container-color {
+        background-color: cornsilk;
+        border:2px solid black;
+        border-radius: 5px;
+        height: 75px;
+        padding: 5px;
+      }
+
+      .item-color {
+        background-color: royalblue;
+        border:2px solid royalblue;
+        width: 20%;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+      }
+      .container {
+        display: flex;       
+      }
+      .logo {
+        width: 100px;
+        font-size: 1.2em;
+        text-align: center;
+        color: whitesmoke;
+        font-weight: 500;
+        line-height: 2.5em;
+        transition: all 1s;
+      }
+      /* 이렇게 주시면 간격을 자동으로 잡는다. */
+      .logo {
+        margin-right: auto;
+      }
+      .logo:hover {
+        width: 20%;
+        background-color: tomato;
+        border: none;
+      }
+
+      .item {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100px;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 2.5em;
+        transition: all 0.5s;
+      }
+      .item:hover {
+       
+        width: 120px;
+        background-color: rgb(212, 0, 0);
+        border:2px solid rgb(212, 0, 0);
+        border-radius: 10px;
+        color: rgb(245, 226, 52);
+      }
+
+    
+     
+    </style>
+</head>
+<body>
+    <ul class="container-color container">
+      <li class="item-color logo">LOGO</li>
+      <li class="item-color item">ABOUT ME</li>
+      <li class="item-color item">SKTLL</li>
+      <li class="item-color item">PORTFOLIO</li>
+      <li class="item-color item">CONTACT</li>
+    </ul>
+
+
+</body>
+</html>

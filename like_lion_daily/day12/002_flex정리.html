@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+    
+</body><!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-1</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+      .container-color {
+        background-color: cornsilk;
+        border:3px solid black;
+        border-radius: 10px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .item-color {
+        background-color: tomato;
+        border:3px solid black;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+      }
+      .container1 {
+        display: flex;
+        flex-direction: column;
+        /* flex-direction: row; */
+      }
+      .item2 {
+        /* width 를 조정하면 UI 가 깨짐 */
+        /* width: 400px; */
+        flex-basis: 400px;
+      }
+     
+    </style>
+</head>
+<body>
+    display:flex flex-basis 실습
+    <div class="container-color container1">
+      <div class="item-color item1">Lorem.</div>
+      <div class="item-color item2">Lorem, ipsum.</div>
+      <div class="item-color item3">Lorem, ipsum dolor.</div>
+      <div class="item-color item4">Lorem ipsum dolor sit.</div>
+    </div>
+
+
+</body>
+</html>

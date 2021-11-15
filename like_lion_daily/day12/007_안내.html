@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 실전 예제</title>
+  <link rel="stylesheet" href="../../reset.css">
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <style>
+    .info-list__content {
+      display: flex;
+      line-height: 20px;
+    }
+
+    .info-list__content::before {
+      content: "⚡️";
+    }
+  </style>
+</head>
+<body>
+  <!-- https://copychar.cc/ -->
+  <ul>
+    <li>
+      <div class="info-list__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat quod et
+        assumenda expedita perspiciatis quia dolore, vel totam ratione dicta repellat odio voluptatem? Ex sequi ad
+        numquam dicta debitis.</div>
+    </li>
+    <li>
+      <div class="info-list__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat quod et
+        assumenda expedita perspiciatis quia dolore, vel totam ratione dicta repellat odio voluptatem? Ex sequi ad
+        numquam dicta debitis.</div>
+    </li>
+  </ul>
+</body>
+
+</html>
