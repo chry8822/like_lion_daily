@@ -1,0 +1,103 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/*     index.html     */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:#0D6EFD ;
+  height: 70vh;
+  min-width: 500px;
+  color: #fff;
+}
+
+.landing p {
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 2px;
+}
+.landing h1 {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.footer {
+  background-color:  #E8EEF4;
+  height: 30vh;
+  font-size: 16px;
+  color: #7C8081;
+  text-align: center;
+  
+}
+
+
+
+/*    test.html    */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:#0D6EFD ;
+  height: 10vh;
+  min-height: 60px;
+  color: #fff;
+}
+
+.header h1 {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 40px;
+  
+/*  선택지 모듈 */
+
+}
+.question h2 {  
+  font-weight: 700;
+}
+
+  
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  /* padding-bottom: 53px;
+  padding-top: 43px; */
+}
+
+.question p {
+  width: 80%;
+  text-align: center;
+}
+
+/* result.css */
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+.result img {
+  max-width: 500px;
+  width: 80%;
+}
