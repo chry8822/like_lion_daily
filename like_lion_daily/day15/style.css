@@ -1,0 +1,122 @@
+@keyframes object-rotate {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      /* turn이라는 단위는 정확히 한 바퀴를 돌리라는 의미입니다. */
+      transform: rotateY(-1turn);
+  }
+}
+
+@keyframes object2-rotate {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      /* turn이라는 단위는 정확히 한 바퀴를 돌리라는 의미입니다. */
+      transform: rotateY(1turn);
+  }
+}
+
+@keyframes scene-rotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  100% {
+      /* turn이라는 단위는 정확히 한 바퀴를 돌리라는 의미입니다. */
+      transform: rotateX(29deg) rotateY(22deg);
+  }
+  
+}
+
+@keyframes star-rotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+ 
+  
+}
+
+body {
+  background-color: #333;
+  width: 100vh;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: whitesmoke;
+  border-radius: 100%;
+  transform: translate(-50% , -50%);
+  margin: 0 auto;
+  box-shadow: 0 0 40px 5px rgb(255, 235, 186);
+  background-image: url(./png-clipart-coins-coins.png) ;
+  background-position: center;  
+  background-size: cover;
+ 
+}
+
+
+.scene {
+  transform-style: preserve-3d;
+  /* 나중에 회전 */
+  animation: scene-rotate 10s linear infinite alternate;
+  transform: rotateX(29deg) rotateY(22deg);
+}
+
+.circle {
+  font-size: 50px;
+  font-weight: bold;
+  /* 나중에 작성 */
+  animation: object-rotate 15s linear infinite;
+  transform-style: preserve-3d;
+  
+}
+.circle-2 {
+  font-size: 20px;
+  font-weight: bold;
+  /* 나중에 작성 */
+  animation: object2-rotate 15s ease infinite;
+  transform-style: preserve-3d;
+ 
+}
+.circle-2 .word {
+  transform-style: preserve-3d;
+  transition: all .3s;
+  
+}
+
+.circle-2 span {
+ 
+  position: absolute;
+  transform: rotateY(calc(var(--char-index)*5deg)) translateZ(500px);
+  transition: all .3s;
+  
+}
+
+
+.circle .word {
+  transform-style: preserve-3d;
+  transition: all .3s;
+  
+}
+.circle span {
+ 
+  position: absolute;
+  transform: rotateY(calc(var(--char-index)*5deg)) translateZ(900px);
+  transition: all .3s;
+  
+}
