@@ -207,7 +207,11 @@ max-width: 767px
 
 <br/>
 
-[완성-링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day10/day10/108_1%EB%A7%8C_%EA%B0%99%EC%9D%B4%EC%BD%94%EB%94%A9.html)
+[내가짠코드-링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day9/%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9%EA%B5%AC%ED%98%84.html)
+
+<br/>
+
+[강사님과함께한코드-링크](https://chry8822.github.io/like_lion_daily/like_lion_daily/day10/day10/108_1%EB%A7%8C_%EA%B0%99%EC%9D%B4%EC%BD%94%EB%94%A9.html)
 
 <br/>
 <br/>
