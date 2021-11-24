@@ -362,9 +362,12 @@ css 에서 transform 의 심화 과정 느낌이 들었는데   transform: rotat
 ![행성-min](https://user-images.githubusercontent.com/89508217/142540019-8143fc21-cf4b-4a7f-ac99-30a9bcbb7813.gif)
 
 
-### 16-18일차
 
 <br/>
+<br/>
+
+### 16-18일차
+
 <br/>
 
 ## 셀렉트 박스 커스텀, tailwindcss, bootstrap
