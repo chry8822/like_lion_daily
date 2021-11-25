@@ -1,0 +1,13 @@
+ul {
+  li {
+    &:hover {
+      background: brown;
+      cursor: pointer;
+			// 가상요소 
+    }
+    &:last-child {
+      border-bottom: 2px solid black;
+			// 가상클래스 
+    }
+  }
+}

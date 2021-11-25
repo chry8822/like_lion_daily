@@ -1,0 +1,23 @@
+/* 여러줄 주석은 볼 수 있습니다. */
+// 한줄 주석은 css 변환시 사라집니다.
+
+
+ul {
+  list-style-type: none;
+  li {
+    color: blue;
+    font-size: 10px;
+  }
+}
+
+
+.add-icon {
+  background : {
+    image: url("");
+    position : center center;
+    repeat: no-repeat;
+    size: 200px 100px;
+  }
+}
+
+1
