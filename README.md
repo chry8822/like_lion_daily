@@ -386,4 +386,83 @@ css 에서 transform 의 심화 과정 느낌이 들었는데   transform: rotat
 
 <br/>
 
+### 19일차
+
+<br/>
+
+## sass / scss 
+
+<br/>
+
+* 중첩기능으로 html과 시각적 계층 방식과 동일하게 css 를 중청해서 작성할수 있다.
+* 속성도 중첩으로 줄도 있다! 중첩 속성은 : 콜론을 사용한다
+* "&"는 상위에 있는 부모선택자를 가리킨다.
+* $으로 변수를 생성 하여 사용할수 있어서 필요한 속성같을 저장해서 재사용성을 올리고 편하게 스타일일 할수있다
+* 변수의 타입은 numbers, strings, color, booleans, lists, null
+* @mixin 을 반복되는 코드를 재사용 하기 위해서 @mixin이름(매개변) 정의하고 @include 이름 (인수) 로 사용한다.
+* 매개변수에는 기본값도 설정할수있다.
+* 주의사항 깊은 중첩은 사용하지 안도록 주의
+
+-sass 를 사용하면 불필요한 코드를 줄이고 재사용과 유지보수에 크게 향상을 줄수 있을꺼같다. 아직 css 에서 바로 넘어와서 편하게 사용하기는 적응이 안되서 어렵지만 
+mixin 같은 기능들은 직관적으로 어렵지 않아서 적응하면 좀더 편하게 스타일을 할수 있을꺼라 생각한다.
+
+<br/>
+<br/>
+
+
+
+### 예시
+
+<br/>
+
+### css로 사용시 겹치는 부분들이 존재한다.
+~~~ 
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: gray;
+}
+
+.aside {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+} 
+~~~
+
+
+
+<br/>
+
+### @mixin 을 사용해서 중첩되는 속성들을 모아서 @include로 중첩코드를 줄이고 재사용성을 높일수있다. 
+
+
+~~~
+
+@mixin center-xy{
+	display: flex;
+	justify-content : center;
+	align-items : center;
+}
+
+.card{
+	@include center-xy; // 정의한 center-xy mixin을 사용하여 코드 한줄이면 끝!
+}
+
+.aside{
+	@include center-xy; 
+}
+
+~~~
+
+
+
+
+
+
+
+
+
 
