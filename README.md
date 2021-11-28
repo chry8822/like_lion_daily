@@ -459,10 +459,160 @@ mixin 같은 기능들은 직관적으로 어렵지 않아서 적응하면 좀�
 
 
 
+<br/>
+<br/>
 
 
+### 20일차
 
 
+<br/>
+<br/>
+
+## scss , 반응형 이미지와 반응형 동영상.
+
+<br/>
+
+### scss
+
+<br/>
+
+* 반복되는 코드를 만들지 말라(Don't Repeat Yourself - 앤드루 헌트, 데이비드 토머스의 실용주의 프로그래머)
+* @mixin 심화 활용 방법 실습하기.  (mixin 은 활용하여 불필요한 코드를 줄이고 유지보수에 용이함을 줄수있다)
+*  네스팅방법에 mixin 활용하기 (네스팅방법에 mixin을 활용하여 시각적으로 좀더 편하게 스타일을 줄수 있다.)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*  mixin if 문 (mixin 에 if문 조건문으로 좀더 다양하게 mixin 을 활용할수 있다. 아직 적응이 안되서 적응필요)
+
+###  if 조건문 예시
+
+```
+@mixin triangle($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  //여기 부분만 수정했습니다.
+  border-color: black;
+  border-style: solid;
+  border-width: ($size/2);
+
+  @if $direction == up {
+    border-bottom-color: $color;
+    border-color: red;
+  } @else if $direction == right {
+    border-left-color: $color;
+    border-color: royalblue;
+  } @else if $direction == down {
+    border-top-color: $color;
+    border-color: green;
+  } @else if $direction == left {
+    border-right-color: $color;
+    border-color: hotpink;
+  } @else {
+    @error "Unknown direction #{$direction}.";
+  }
+}
+
+.next {
+  @include triangle(5px, black, left);
+}
+```
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<br>
+<br>
+
+*  scss 에서 for문 활용하기 (반복 수행할 요소에  for 반복문을 활용하여 좀더 실용적으로 스타일을 일괄 적용할수 있다.)
+
+
+### for 반복문 예시 . 
+
+```
+@for $i from 1 through 10 {
+  .content-#{$i} {
+      font-size: #{$i * 10}px;
+      width: 100px;
+      height: 100px;
+      line-height: 1+(#{$i}/2);
+      background-color: red;
+  }
+} 
+```
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<br>
+
+* each 반복문 (for문과 비슷해보이지만 다르고 for문보다는 좀더 복잡해 보인다. 실습에는 index 내장 함수를 사용했고 매개변수에 미리 3가지 색을 정해놓고 each문을 실행하면 매개변수가 가지고 있는 갯수만큼 반복한다.)
+
+<br>
+
+### each문 예시.
+
+<br>
+
+```
+$color-palette: red green blue;
+
+@each $color in $color-palette {
+    $i: index($color-palette, $color); //index는 list의 내장함수
+
+    .color-circle:nth-child(#{$i}) {
+        font-size: #{$i * 10}px;
+        background: $color;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+}
+```
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<br>
+
+* function 함수 실습 (함수와 wihle 을 사용해 매개변수 value 값을 리턴 해준다. while 문의 조건이 맞으면 리턴하지 않고 반복으로 돌다가 조건이 끝나면 value 값을 리턴한다.)
+
+<br>
+
+### function 함수 예시.
+
+<br>
+
+```
+$normal-font-size: 16px;
+
+@function scale-below($value, $base, $ratio: 2) {
+    @while $value > $base {
+        $value: ($value/$ratio);
+    }
+    @return $value;
+}
+
+.sup {
+    font-size: scale-below(20px, 4px);
+}
+```
+
+<br>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 반응형 이미지
+
+* 예시로 너비와 높이를 100vw, vh 를 줬을대  background: url(./icon_google.png) center center/contain no-repeat; (x축 center , y축 center 로주면 이미지가 커지거나 작아져도 센터를 유지한다.)
+* contain 은 원본 비율을(이미지 전체가 보이도록) 유지하고 cover는 중앙비율(컨테이너에 빈틈없이 매워진다)을 유지한다. 보통  알파값이 있는 이미지는 contain , 알파값이 없는 이미지는 cover
+
+### 반응형 동영상
+
+* iframe 을 사용해서 레터박스(상하 나 좌우에 생기는 검은색 여백) 를 없에고 반응형으로 꽉찬 화면만들기,
+* iframe 을 div나 다른 컨테이너로 감싸고 감싼 컨테이너에 relative와 해당 동영상의  높이를 너비로 나눈다 예를들어 1280x720 영상이면 720/1280 그리고 * 100  을 해주면  값이 나오는데 그 값을 컨테이너에 padding-top 에 넣어준다. 
+* 그리고 iframe 에 position : absolute , top:0 lefr:0 height: 100% width:100% 를 주면 iframe의 동영상이 컨테이너가 정한 크기에 꽉차고 레터박스 없이 반응형으로 나오게 된다.
+* padding 값에 %값은 부모의 width값 기준이다!
+* 비디오를 자동재생 할거면 접근성에 의해서 뮤트로 하거나 강제로 뮤트가 된상태로 자동재생이 된다. (사용자 접근성 관련)
 
 
 
