@@ -614,5 +614,6 @@ $normal-font-size: 16px;
 * padding 값에 %값은 부모의 width값 기준이다!
 * 비디오를 자동재생 할거면 접근성에 의해서 뮤트로 하거나 강제로 뮤트가 된상태로 자동재생이 된다. (사용자 접근성 관련)
 
+<br>
 
-
+[반응형 동영상](https://chry8822.github.io/like_lion_daily/like_lion_daily/day20/day20/day20-1/004%EB%B0%98%EC%9D%91%ED%98%95%20%EB%8F%99%EC%98%81%EC%83%81.html)
