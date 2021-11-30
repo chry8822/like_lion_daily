@@ -642,3 +642,57 @@ $normal-font-size: 16px;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
+<br>
+
+### 22일차
+
+<br>
+
+### 자바스크립트(js) for 문 연습하기.
+
+<br>
+
+*  숫자 100까지의 3과 5의 배수를 for문과 if 문을 이용해서 더하여 그 값을 출력 한다. or 연산자와 % 연산을 사용해서 두개의 값을 result에 넣어주고 console.log 로 출력한다.
+*  1~100까지 더하기. for 문으로 100까지 증감연산자를 사용하여 result += i; 값을 넣고  console.log 로 출력한다.
+*  짝수 더하기.   for (let i = 0; i < 101; i += 2) 증감연산자를 2로 늘려서 2씩 늘어나게 한후  result += i; 값을 넣고  console.log 로 출력한다.
+*  이주 for문 을 이용한 구구단 출력. 이중 for 문으로 각각 i= 2 , j= 1 를 할당하고 증감연산자 사용후  리터럴 템플릿을 사용하여  console.log(`${i} x ${j} = ${i*j}`) 출력한다.
+*  배열된 숫자에서 최소값 구하기.
+*  if 문으로 temp값이 sample 배열의 값보다 크면 그 smaple 배열의 값을 temp의 넣어준다. 반복하면 최소값이 마지막에 들어가게 된다. 
+```
+최소값 구하기
+let sample = [10, 20, 30, 5, 6, 3, 100, 110, 99, 98];
+let temp = sample[0]
+
+for (let i = 0; i < sample.length ; i++) {
+    if (temp > sample[i]){
+        temp = sample[i];
+    }
+}
+
+console.log(temp);
+```
+* 최대값 구하기
+* 위와 같은 방법으로 temp 값이 sample 배열의 값보다 작으면  sample 값을 temp의 넣어준다. 반복하며 최대값이 마지막에 들어가게 된다,
+```
+최대값 구하기
+
+let sample = [10, 20, 30, 5, 6, 3, 100, 110, 99, 98];
+let temp = sample[0]
+
+
+for (let i = 0; i < sample.length ; i++) {
+    if (temp < sample[i]){
+        temp = sample[i];
+    }
+}
+```
+* 문자의 앞에 두글자씩만 순서대로 나오게 만들기.
+* .length 를 사용해서 문자의 길이만큼 증감시키는 for 문을 만들어주고 ([i-1] , [i]) 로 두글자씩 순서 대로 출력 한다.
+```
+let text = 'javascript';
+
+for (let i = 0; i < text.length; i ++){
+  console.log(text[i-1], text[i]);
+}
+
+```
