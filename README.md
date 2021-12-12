@@ -1091,6 +1091,112 @@ let data = [{                                         // 오브젝트를 배열�
 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
+### 26일차
+	
+<br>
+
+### 자바스크립트
+	
+<br>
+<br>
+	
+* 로또번호생성 만들기.
+	* Math 의 floor와 (Math.random() * (max - min) + min) 으로  1 부터 45 까지의 랜덤번호를 생성하는 함수를 만들고.
+	* while문으로 6개가 담길때까지 반복하는데 조건으로 겹치는 숫자는 안담기게 한다 이때 사용할수있는 방법들로는 
+		* if문 또는 new Set()을 사용해서 겹치지 않게 만들어준다. 
+		* if 문 사용시 결과값과 랜덤으로 생성되는 수를 비교하거나 includes를 사용해서 겹침을 방지한다.
+	<pre>
+	// if 조건문으로 생성시.
+	 function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+  	  }
+
+   	 let lottoArr = [];
+   	 function lottoGenerator() {
+    	    lottoArr=[];
+   	     while (lottoArr.length < 6) {
+            let result = randomNum(1, 46);
+            // 중복 판단하기위해 필요한 변수
+            let isGot = false;
+            // 중복 판단.
+            lottoArr.forEach(element => {
+              // 요소가 result 와 같다면 중복!
+              if(element === result){
+                isGot = true;
+              }
+            });
+            // 중복이 없다면 배열에 추가
+            if(!isGot) {
+              lottoArr.push(result);
+            }
+
+       	 }
+       	 return lottoArr;
+	 }
+
+	 console.log(lottoGenerator())	
+	 
+	 
+	 // includes 사용시
+	 
+	  let lottoArr = [];
+   	  function lottoGenerator() {
+           lottoArr=[];  // 초기화
+              while (lottoArr.length < 6) {
+                 let result = randomNum(1, 46);
+            // 중복 판단하기위해 필요한 변수
+                 let isGot = false;
+	    
+	    // 겹치지 않는수를 담아준다.
+         	 if (!lottoArr.includes(result)) {
+         	     lottoArr.push(result); 
+                }
+             }
+            return lottoArr;
+         }
+        console.log(lottoGenerator())
 	
 	
+	// Set 사용시
+		
+	let lottoArr = [];
+	let lottoSet = new Set();
+
+	function lottoGenerator() {
+	   lottoSet.clear();
+ 	   while (lottoSet.size < 6) {
+      	  let result = randomNum(1, 46);
+     	   lottoSet.add(result);
+  	  }
+   	 return lottoSet;
+	}
+	 </pre>
 	
+### DOM
+
+<br>
+
+
+**DOM 은 HTML 문서의 내용을 트리형태로 구조화하여 웹페이지와 프로그래밍 언어를 연결시켜주는 역할을 한다. 이때 각각의 요소와 속성, 콘텐츠를 표현하는 단위를 '노드(node)'라고 한다.**
+
+<br>
+
+* document.getElementById 와 document.getElementsByClassName 를 사용해서 console.log() 찍어보기.
+* ul 리스트에서 원하는 요소에 접근하여 console.log 출력하기
+	* document.querySelector , document.querySelectorAll 을 사용해서 console.log 출력하기
+	
+**이벤트 : 이벤트의 타입에는 click, mouseover, mouseout, wheel 등 다양한 이벤트를 감지한다. listener 함수의 인수에는 이벤트에 대한 정보가 담겨있다.**
+* click 이벤트시 (실습하기)
+	* classList.remove 클래스삭제
+	* classList.toggle 클래스 토글
+	* classList.contains 클래스가 있는지 확인
+	
+* DOM 선택자 와 이벤트를 사용해서 실습해보기 (신호등 만들기.) - 버튼 클릭시 박스 색변하게 .
+
+
+![신호등](https://user-images.githubusercontent.com/89508217/145719099-ed5040dd-28a6-4e36-86e8-cd02f1274684.gif)
+
+
+<br>
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------	
