@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .sign {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sign div {
+      width: 100px;
+      height: 100px;
+      border: 3px solid black;
+      border-radius: 50%;
+      background-color: #FFF;
+      margin: 50px 20px;
+    }
+
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrap button {
+      padding: 5px 10px;
+      margin: 0 40px;
+      background-color: royalblue;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .g.on {
+      background-color: green;
+    }
+
+    .y.on {
+      background-color: gold;
+    }
+
+    .r.on {
+      background-color: red;
+    }
+    button {
+      cursor: pointer;
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sign">
+    <div class="g"></div>
+    <div class="y"></div>
+    <div class="r"></div>
+  </div>
+
+  <div class="wrap">
+    <button>건너</button>
+    <button>건너/말아</button>
+    <button>멈춰</button>
+  </div>
+
+  <script>
+    // 브라우저 시작
+    const myBtn1 = document.querySelectorAll('button')[0];
+    const myBtn2 = document.querySelectorAll('button')[1];
+    const myBtn3 = document.querySelectorAll('button')[2];
+
+    const greenCircleElement = document.getElementsByClassName('g')[0];
+    const yellowCircleElement = document.getElementsByClassName('y')[0];
+    const redCircleElement = document.getElementsByClassName('r')[0];
+
+    myBtn1.addEventListener('click', function () {
+      if(greenCircleElement.classList.toggle('on')) {
+        yellowCircleElement.classList.remove('on');
+        redCircleElement.classList.remove('on');
+      }
+    })
+    myBtn2.addEventListener('click', function () {
+      if(yellowCircleElement.classList.toggle('on')) {
+        greenCircleElement.classList.remove('on');
+        redCircleElement.classList.remove('on');
+      }
+    })
+
+    myBtn3.addEventListener('click', function () {
+      if(redCircleElement.classList.toggle('on')) {
+        greenCircleElement.classList.remove('on');
+        yellowCircleElement.classList.remove('on');
+      }
+    })
+
+    // 브라우저 끝
+  </script>
+</body>
+
+</html>
+<!-- //다시 해보기 -->

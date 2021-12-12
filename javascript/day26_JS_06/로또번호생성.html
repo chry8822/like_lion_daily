@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+
+  <script>
+    function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    let lottoArr = [];
+    function lottoGenerator() {
+        lottoArr=[];
+        while (lottoArr.length < 6) {
+            let result = randomNum(1, 46);
+            // 중복 판단하기위해 필요한 변수
+            let isGot = false;
+            // 중복 판단.
+            lottoArr.forEach(element => {
+              // 요소가 result 와 같다면 중복!
+              if(element === result){
+                isGot = true;
+              }
+            });
+            // 중복이 없다면 배열에 추가
+            if(!isGot) {
+              lottoArr.push(result);
+            }
+
+        }
+        return lottoArr;
+    }
+
+    console.log(lottoGenerator())
+</script>
+
+<!-- // includes 로 사용하기 -->
+ <script>
+    function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    let lottoArr = [];
+    function lottoGenerator() {
+        lottoArr=[];
+        while (lottoArr.length < 6) {
+            let result = randomNum(1, 46);
+            // 중복 판단하기위해 필요한 변수
+            let isGot = false;
+
+        if (!lottoArr.includes(result)) {
+           lottoArr.push(result);
+        }
+
+
+        }
+        return lottoArr;
+    }
+
+    console.log(lottoGenerator())
+</script>
+
+
+<script>
+ 
+// let lottoArr = [];
+let lottoSet = new Set();
+
+function lottoGenerator() {
+   lottoSet.clear()
+    while (lottoSet.size < 6) {
+        let result = randomNum(1, 46);
+        lottoSet.add(result);
+    }
+    return lottoSet;
+}
+</script>
+
+
+
+
+
+
+<script>
+let lotto = new Set();
+function random(min, max){
+  return Math.floor(Math.random()*(max-min)+min);
+  
+}
+
+
+// lotto.clear();
+function z() {
+  lotto = new Set();
+  while(lotto.size < 6) {
+    // console.log('dd')
+    let num = random(1, 46);
+    // console.log('num', num)
+    lotto.add(num);
+    // console.log('lotto', lotto);
+  }
+  console.log(lotto)
+}
+
+console.log(lotto)
+
+
+
+</script>
+
+
+</body>
+</html>
