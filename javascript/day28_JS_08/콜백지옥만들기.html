@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style></style>
+</head>
+
+<body>
+  <script>
+
+    const userDB = [
+      {
+        "_id": "61b05f1ea7f950a46bdc9fc1",
+        "id": "Lang",
+        "pw": "065e6e7e-212e-4982-9ed3-775f113a276a",
+        "index": 0,
+        "picture": "http://placehold.it/32x32",
+        "age": 26,
+        "eyeColor": "green",
+        "name": "Joanna Roberts",
+        "gender": "female",
+        "company": "CINASTER",
+        "email": "joannaroberts@cinaster.com",
+        "phone": "+1 (893) 521-2750",
+        "address": "808 Knight Court, Independence, Virginia, 687",
+        "grade": "일반"
+      },
+      {
+        "_id": "61b05f1e9e91e346e8c41649",
+        "id": "chrys",
+        "pw": "1234",
+        "index": 1,
+        "picture": "http://placehold.it/32x32",
+        "age": 29,
+        "eyeColor": "brown",
+        "name": "Bette Ellis",
+        "gender": "female",
+        "company": "KIOSK",
+        "email": "betteellis@kiosk.com",
+        "phone": "+1 (910) 545-3529",
+        "address": "383 Bedford Avenue, Hessville, Texas, 8333",
+        "grade": "관리자"
+      },
+      {
+        "_id": "61b05f1e5c39ef82a9136c61",
+        "id": "Talley",
+        "pw": "3582d74a-a2d1-4efa-b92f-08835f0b53c2",
+        "index": 2,
+        "picture": "http://placehold.it/32x32",
+        "age": 35,
+        "eyeColor": "green",
+        "name": "Cabrera Rosario",
+        "gender": "male",
+        "company": "JETSILK",
+        "email": "cabrerarosario@jetsilk.com",
+        "phone": "+1 (835) 436-3764",
+        "address": "899 Madison Street, Somerset, Delaware, 5324",
+        "grade": "실버"
+      },
+      {
+        "_id": "61b05f1e47db2dd5e9b7acbf",
+        "id": "Jordan",
+        "pw": "322379f8-ba6c-4411-9d17-8c3e50cbf9ea",
+        "index": 3,
+        "picture": "http://placehold.it/32x32",
+        "age": 25,
+        "eyeColor": "blue",
+        "name": "Kathy House",
+        "gender": "female",
+        "company": "MENBRAIN",
+        "email": "kathyhouse@menbrain.com",
+        "phone": "+1 (812) 430-2097",
+        "address": "209 Bushwick Place, Bend, Kansas, 6588",
+        "grade": "골드"
+      },
+      {
+        "_id": "61b05f1ef1486bbbe084af2c",
+        "id": "Jefferson",
+        "pw": "0c33ce38-f422-44b3-bf84-86840117a054",
+        "index": 4,
+        "picture": "http://placehold.it/32x32",
+        "age": 35,
+        "eyeColor": "blue",
+        "name": "Matilda Santiago",
+        "gender": "female",
+        "company": "QOT",
+        "email": "matildasantiago@qot.com",
+        "phone": "+1 (983) 574-2689",
+        "address": "489 Hanover Place, Chemung, Wyoming, 6661",
+        "grade": "다이아몬드"
+      },
+      {
+        "_id": "61b05f1e322e20ba36b75272",
+        "id": "Jennings",
+        "pw": "08500994-4a4b-4b71-91b6-a163c467b64a",
+        "index": 5,
+        "picture": "http://placehold.it/32x32",
+        "age": 38,
+        "eyeColor": "brown",
+        "name": "Annie Albert",
+        "gender": "female",
+        "company": "VANTAGE",
+        "email": "anniealbert@vantage.com",
+        "phone": "+1 (822) 580-2069",
+        "address": "382 Oak Street, Bynum, Kentucky, 6362",
+        "grade": "다이아몬드"
+      },
+      {
+        "_id": "61b05f1e17c1df4ee589f505",
+        "id": "Liza",
+        "pw": "83ba9519-8dd2-4909-9283-e798f45f0132",
+        "index": 6,
+        "picture": "http://placehold.it/32x32",
+        "age": 39,
+        "eyeColor": "green",
+        "name": "Soto Wooten",
+        "gender": "male",
+        "company": "MUSIX",
+        "email": "sotowooten@musix.com",
+        "phone": "+1 (898) 581-2530",
+        "address": "401 Truxton Street, Westphalia, Maine, 5495",
+        "grade": "실버"
+      },
+      {
+        "_id": "61b05f1e0eccb7ee3fb525f6",
+        "id": "Ingram",
+        "pw": "cda4493f-fdfd-4bde-902f-cd552c893e4a",
+        "index": 7,
+        "picture": "http://placehold.it/32x32",
+        "age": 39,
+        "eyeColor": "green",
+        "name": "Bessie Rollins",
+        "gender": "female",
+        "company": "CANOPOLY",
+        "email": "bessierollins@canopoly.com",
+        "phone": "+1 (985) 462-3570",
+        "address": "932 Dank Court, Wadsworth, South Carolina, 9265",
+        "grade": "골드"
+      }
+    ]
+
+    class GetUserData {
+      login(아이디, 비밀번호, 성공, 실패) {
+        const data = userDB.find(user => user.id === 아이디 && user.pw === 비밀번호);
+        if (data) {
+          성공(아이디)
+        } else {
+          alert('로그인 실패')
+          실패(new Error('로그인 실패!'))
+        }
+      }
+      getUserDataSet(이용자, 성공, 실패) {
+        const data = userDB.find(user => user.id === 이용자);
+        if (data) {
+          성공({
+            id: data.id,
+            picture: data.picture,
+            name: data.name,
+            company: data.company,
+            email: data.email,
+            grade: data.grade
+          });
+        } else {
+          실패(new Error('데이터 베이스 로드 실패!'));
+        }
+      }
+    }
+    const userData = new GetUserData();
+    const id = 'chrys';
+    const pw = '1234';
+    userData.login(
+      id,
+      pw,
+      (userID) => {
+        userData.getUserDataSet(
+          userID,
+         (userBasicInfo) => {
+          // grade에 따른 콜백을 하나 더 넣어줄 수 있습니다.
+            console.log(userBasicInfo);
+        },
+        (실패) => {
+          console.log(실패);
+         }
+        )
+      },
+      (실패) => {
+        console.log(실패);
+      }
+    )
+  </script>
+</body>
+
+</html>
