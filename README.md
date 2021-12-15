@@ -1200,3 +1200,89 @@ let data = [{                                         // 오브젝트를 배열�
 <br>
 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------	
+
+### 27일차
+
+<br>
+
+### 자바스크립트
+
+<br>
+<br>
+
+**json 데이터를 호출버튼 클릭시에 해당 키값에 맞는 데이터를 불러오고 키값클릭시에 정렬되게 만들기**
+
+* JSON.parse(): JSON문자열을 자바스크립트 객체로 변환한다.
+* JSON.stringify() : 자바스크립트 객체를 JSON문자열로 변환한다.
+
+* json 데이터를 변수로 담아주고 js 파일로 저장한다. 그리고 index.html 에 연결시켜준다.
+* 데이터 호출에 필요한 클릭버튼을 만들어 주고 onclick 으로 데이터를 불러올 함수(핸들러)를 할당한다. (수업편의상 따로 안하고 인라인으로 했다)
+* 호출한 데이터를 키값을 눌렀을때 정렬되는 이벤트 핸들러도 따로 버튼을 만들어서 등록한다.
+* 벨류를 불러들일 순서대로 키값을들 테이블로 마크업 해준다. (tbody 는 클릭시 불러올 json 데이터의 자리)
+<pre>
+<table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th onclick="sortTable('index')">index</th>
+                <th onclick="sortTable('picture')">picture</th>
+                <th onclick="sortTable('age')">age</th>
+                <th onclick="sortTable('eyeColor')">eyeColor</th>
+                <th onclick="sortTable('name')">name</th>
+                <th onclick="sortTable('gender')">gender</th>
+                <th onclick="sortTable('company')">company</th>
+                <th onclick="sortTable('email')">email</th>
+                <th onclick="sortTable('phone')">phone</th>
+                <th onclick="sortTable('address')">address</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</pre>
+
+* 클릭버튼에 할당한 함수에 인자값으로 json 을 할당한 변수를 넣어준다.
+* 키값 위치에 맞게 데이터들을 정렬하고 테이블구조 통째로 tbodyData 배열에 넣어준다, 그리고 querySelector ,innerHTML 과 join으로 스트링으로 변환하고 넣어준다.
+* onclick 에 renderTable(data)가 이벤드 핸들러 할당되어있어서 클릭시 처음 마크업한 thead 아래 tbody 의 값들로 들어간다. (테이블 구조 통째로 넣어줘서 같은 테이블 형태로 나옴)
+
+<pre>
+   function renderTable(data) {
+            let tbodyData = [];
+            for (const iterator of data) {
+                //console.log(iterator);
+                tbodyData.push(`
+                    <tr>
+                        <th>${iterator.index}</th>
+                        <th>${iterator.picture}</th>
+                        <th>${iterator.age}</th>
+                        <th>${iterator.eyeColor}</th>
+                        <th>${iterator.name}</th>
+                        <th>${iterator.gender}</th>
+                        <th>${iterator.company}</th>
+                        <th>${iterator.email}</th>
+                        <th>${iterator.phone}</th>
+                        <th>${iterator.address}</th>
+                    </tr>
+                `)
+            }
+            document.querySelector('.table > tbody').innerHTML = tbodyData.join('');
+          }
+</pre>
+
+* 두번째 버튼의 sort 함수 (모든 키값들에 등록해줘서 모든 키값이 정렬 기능을 사용할수있다)
+
+<pre>
+  let click = true;
+        function sortTable(key) {
+          if (click) {
+            click = false;
+            data.sort((a, b) => (a[key] < b[key] ? -1 : (a[key] > b[key] ?  1 : 0)))
+          } else {
+            click = true;
+            data.sort((a, b) => (a[key] > b[key] ? -1 : (a[key] < b[key] ?  1 : 0)))
+          }
+           renderTable(data)
+        }
+</pre>
+
+<br>
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------
