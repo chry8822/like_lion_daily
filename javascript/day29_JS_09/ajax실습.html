@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../reset.css">
+  <style></style>
+</head>
+
+<body>
+  <button type="button" id="btn_data">클릭해주세요!</button>
+  <div id="data">data</div>
+
+  <button type="button" id="btn_data2">클릭해주세요!</button>
+  <div id="data2">data</div>
+
+  <button type="button" id="btn_data3">클릭해주세요!</button>
+  <div id="data3">data</div>
+
+  <button type="button" id="btn_data4">클릭해주세요!</button>
+  <div id="data4">data</div>
+
+  <script>
+    $('#btn_data').click(function () {
+      $("#data").load('https://raw.githubusercontent.com/paullabkorea/coronaVaccinationStatus/main/data/data.json');
+    });
+    //제이슨 파일을 불러온다.
+
+    $('#btn_data2').click(function () {
+      $("#data2").load('https://raw.githubusercontent.com/paullabkorea/10000hour/main/index.html h1')
+    });
+    //html 에서 h1 만 가져온다.
+
+    $('#btn_data').click(function () {
+      $("#data").load('https://raw.githubusercontent.com/paullabkorea/10000hour/main/index.html h1', function (responseTxt, statusTxt, xhr) { //콜백함수
+        console.log(responseTxt);
+        console.log(statusTxt);
+        console.log(xhr);
+        console.log(xhr.status);
+      }
+      );
+    });
+    // - responseTxt : 요청 결과
+    // - statusTxt : 요청의 상태
+    // - xhr : 요청한 오브젝트
+    // - xhr.status : 파일의 응답 상태
+
+    // ajax 로딩!!
+    $('#btn_data4').click(function() {
+    //$.ajax({경로, 동기화 여부, 성공하면 할 일})
+    //$.ajax({url:'경로', async: true, success:function(result){}})
+    $.ajax({
+        url:'https://raw.githubusercontent.com/paullabkorea/10000hour/main/index.html', 
+        async: true, 
+        success:function(result){
+            $("#data4").html(result);
+        }
+    });
+});
+
+  </script>
+</body>
+
+</html>

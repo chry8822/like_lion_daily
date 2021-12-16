@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <!-- 설치 없이 CDN 으로 사용 가능 promise 기반 -->
+    <script>
+        const url = 'https://raw.githubusercontent.com/paullabkorea/coronaVaccinationStatus/main/data/data.json';
+        axios.get(url).then((response) => {console.log(response)});
+    </script>
+</body>
+</html>

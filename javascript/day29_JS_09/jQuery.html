@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    // 문서가 다 준비되면 실행!
+    $(function () { // 이것을 주석처리하면 실행이 안된다.
+      // html 이 다 로드되지 않은 상태이기 때문
+      $(".box").fadeOut(300).fadeIn(300);
+    });
+
+  </script>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: brown;
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="one">jQuery 실습</h1>
+  <p>hello</p>
+  <button class="btn1">Click!!</button>
+  <p class="learn">We learning jQuery!</p>
+  <a href="#none" class="learn1">We learning jQuery!</a>
+  <br>
+  <img>
+  <br>
+  <textarea name="메모장" id="memo" cols="30" rows="5"></textarea>
+  <button class="btn2">Memo warnning alert</button>
+  <p id="p3">hello world</p>
+
+  <!-- 1. items 부모를 찾아 backgroundColor 를 파란색으로 바꾸기.
+    2. items 2번째 색을 빨간색으로 바꾸기.
+    3. ul2의 자식인 li 요소를 선택하여 1번부터 3번까지 컬러를 녹색으로 바꾸기.
+    4. ul2의 자식인 li 요소를 선택하여 7번부터 10번까지 컬러를 파란색, backgroundColor를 빨간색으로 바꾸기. -->
+
+  <div class="wrapper">
+    <h1 class="title">TITLE</h1>
+    <ul>
+      <li class="items">item 1</li>
+      <li class="items">item 2</li>
+      <li class="items">item 3</li>
+    </ul>
+  </div>
+  <ul class="ul2">
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+  </ul>
+  <div id="div1">hello world</div>
+  <div id="div11">hello world</div>
+  <div class="one blue">hello world</div>
+  <div class="two blue">hello world</div>
+  <div class="three">hello world</div>
+  <div class="three green">hello world</div>
+
+  <div class="box"></div>
+  <div class="box2"></div>
+  <button class="btn3">click click!!!</button>
+
+
+  <script>
+    // document.getElementById("one").innerHTML = "!!!"
+    $("#one").text("hello jQuery");  // 아이디 클래스에 텍스트 바꾸기.
+    //$("p").hide();  // 태그 엘리먼트 숨기기.
+    $(".btn1").click(function () {
+
+      alert(`"you"ve been clicked`);
+    });
+    // 클릭이벤트로 alert 를 띄울수 있다.
+
+    $(".learn").html("<strong>learning</strong>");
+    //태그를 추가해서 넣을수도 있다.
+
+    $(".learn1").css("color", "red");
+    // 스타일 변경하기 텍스트 컬러 변경
+
+    $("a").css("textDecoration", "none");
+    // a 태그에 밑줄 없애기
+
+    $("img").attr("src", "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201608/04/htm_2016080484837486184.jpg");
+    // img 에 src , 이미지링크 또는 이미지 추가 가능
+    $("img").attr("data-name", "profile").attr("data-hello", "world");
+    //
+
+    $(".btn2").click(function () {
+      let memoVal = $("#memo").val(); //변수에 textarea 의 벨류값을 담아주고
+      $("#memo").val("input text");   //textarea 의 기본 벨류값을 변경
+      alert(memoVal);                 //작성한 벨류값을 alert 로 띄어준다. 
+    });
+
+    $("#p3").css("color", "royalblue").css("backgroundColor", "yellow")
+
+    $(".items").parent().css("backgroundColor", "blue");
+    //   1. items 부모를 찾아 backgroundColor 를 파란색으로 바꾸기.
+    $(".items:nth-child(2)").css("color", "red");
+    //   2. items 2번째 색을 빨간색으로 바꾸기.
+    $(".ul2 li:nth-child(-n+3)").css("color", "green");
+    //  3. ul2의 자식인 li 요소를 선택하여 1번부터 3번까지 컬러를 녹색으로 바꾸기.
+    $(".ul2 li:nth-child(n+8):nth-child(-n+10)").css("color", "blue").css("backgroundColor", "red");
+    // 4. ul2의 자식인 li 요소를 선택하여 7번부터 10번까지 컬러를 파란색, backgroundColor를 빨간색으로 바꾸기.
+    $("ul").append("<li>hello world end</li>");
+    // 객체를 선택한 객체(p)내의 가장 마지막 요소로 붙인다.
+    $(".ul2").prepend("<li>hello world first</li>");
+    // 객체를 선택한 객체(p)내의 가장 첫번째 요소로 붙인다.
+
+    // $("ul").after("<h2>END!</h2>");
+    // $("ul").before("<h2>시작!</h2>");
+
+    $("#div1").remove();
+    // 해당 아이디를 가진 요소 삭제
+    $("#div11").addClass("impo");
+    // 해당 아이디를 가진곳에 클래스 추가
+    $(".one, .two").removeClass("blue");
+    // 해당 클래스에 클래스 삭제
+    $(".three").toggleClass("blue");
+    // 특정 클래스의 추가 또는 제거를 한번에 할수있다.
+    // $(".box").fadeOut(300).fadeIn(300);
+    // 페이드인 페이드 아웃
+
+    // dom 이 준비되면 실행해라!
+
+    $(function () {
+      $(".box").click(function () {
+        $(this).hide();
+
+      })
+    });
+    // 클릭이벤트 박스를 사라지게 하기.
+
+    $('.btn3').click(function () {
+      $('.box2').animate({
+        width: '300px',
+        height: '300px',
+        opacity: 1,
+      }, 'slow');
+    });
+    // 클릭이벤트로(버튼 .btn3)클릭시 애니메이션 적용해보기
+
+    $(".box2").hover(function () {
+      $(this).css("background-color", "yellow");
+    }, function () {
+      $(this).css("background-color", "blue");
+    });
+    // (버튼 .btn3)호버시 컬러변경 적용해보기 호버에서 벗어났을때 blue
+
+    $(".box2").mouseenter(function () {
+      alert("You entered p1!");
+    });
+    // 마우스가 해당 요소안으로 들어가면 작동
+    $(".box2").mouseleave(function () {
+      alert("Bye! You now leaved p1!");
+    });
+    // 마우스가 해당 요소밖으로 나가면 작동
+
+  </script>
+
+</body>
+
+</html>
