@@ -9,7 +9,7 @@
 ## 멋사 수업 실습 데일리 업로드
 <br>
 
-### 2일차
+## 2일차
 * Hello world - 브러우저에 출력하기
 * emmet - 편하고 실용적인 emmet 활용하기
 * 기본구조 - 시멘틱한 구조 연습하기
@@ -19,7 +19,7 @@
 * 마크업실습 - 수업내용으로 배운 html을 활용하여 바울랩 About 페이지 마크업하기.
 <br>
 
-### 3일차
+## 3일차
 * 폼태그 ```<form> <input> <label> <button>``` 을 활용하기 
 해당 태그들에 관련된 속성들에 대해서 이해하고 어떻게 활용되는지 이해하기.
 label 태그의 for와 input태그의 id 의 관계.
@@ -29,7 +29,7 @@ button 태그의 속성들중에 submit 속성이 어떻게 작동하는지.
 
 <br>
 
-### 4일차
+## 4일차
 * inline , block element 이해하기
 * CSS의 적용 방법 
 * 내부 CSS - ```<head> <style > CSS </style> </head>```  html 내부에서 작성한다.
@@ -44,7 +44,7 @@ button 태그의 속성들중에 submit 속성이 어떻게 작동하는지.
 
 <br>
 
-### 5일차
+## 5일차
 * box_model - 컨텐츠의 width,height 이외의 padding, border, margin 의 구조와 구성 작동원리와 활용방법
 * border - border 의 속성들과 활용법 실습
 * radius - border 를 radius 를 사용하여 변형하고 활용하기
@@ -72,7 +72,7 @@ button 태그의 속성들중에 submit 속성이 어떻게 작동하는지.
 <br>
 <br>
 
-### 6일차
+## 6일차
 
 
 <br>
@@ -92,7 +92,7 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <br>
 <br>
 
-### 7일차
+## 7일차
 
 <br>
 <br>
@@ -110,11 +110,11 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <br>
 <br>
 
-### 8일차
+## 8일차
 
 <br>
 <br>
-##  건물올리기 (animation)
+###  건물올리기 (animation)
 
 [ 건물올리기.GIF ](https://chry8822.github.io/like_lion_daily/like_lion_daily/day8/092%EA%B1%B4%EB%AC%BC%EC%98%AC%EB%A6%AC%EA%B8%B0.html)
 
@@ -145,7 +145,7 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 
 <br/>
 
-## 수정해본 이미지
+### 수정해본 이미지
 
 <br/>
 
@@ -155,7 +155,7 @@ float을 제대로 사용하지 못해서 결과물이 안나오지 position까�
 <br/>
 <br/>
 
-### 9일차
+## 9일차
 
 <br/>
 <br/>
@@ -198,7 +198,7 @@ max-width: 767px
 <br/>
 <br/>
 
-### 10일차
+## 10일차
 
 <br/>
 
@@ -217,7 +217,7 @@ max-width: 767px
 <br/>
 <br/>
 
-### 11일차
+## 11일차
 
 <br/>
 
@@ -234,7 +234,7 @@ max-width: 767px
 <br/>
 <br/>
 
-## 로그인 박스
+### 로그인 박스
 <br/>
 <br/>
 
@@ -267,12 +267,12 @@ max-width: 767px
 <br/>
 <br/>
 
-### 12일차
+## 12일차
 
 <br/>
 <br/>
 
-## flex 복습 수업, 메뉴만들기 실습, holy grail layout 실습
+### flex 복습 수업, 메뉴만들기 실습, holy grail layout 실습
 
 <br/>
 <br/>
@@ -284,7 +284,7 @@ max-width: 767px
 <br/>
 <br/>
 
-### 13일차
+## 13일차
 
 <br/>
 <br/>
@@ -307,12 +307,12 @@ max-width: 767px
 
 <br/>
 
-### 14일차
+## 14일차
 
 <br/>
 <br/>
 
-## 조 코딩님 특강데이-
+### 조 코딩님 특강데이-
 
 <br/>
 
@@ -333,12 +333,12 @@ https://kooolzzin.shop/
 <br/>
 <br/>
 
-### 15일차
+## 15일차
 
 <br/>
 <br/>
 
-## 해외 유튜버 클론 코딩
+### 해외 유튜버 클론 코딩
 
 <br/>
 유튜버의 클론 코딩이 수업주제 였는데 해당 영상을 처음부터 끝까지 같이해도 제대로 실행이 되지 않아 강사님이 따로 해당 유튜버가 구현한걸 자체적으로 코딩 하셔서 수업을 진행했다.
@@ -367,15 +367,15 @@ css 에서 transform 의 심화 과정 느낌이 들었는데   transform: rotat
 <br/>
 <br/>
 
-### 16-18일차
+## 16-18일차
 
 <br/>
 
-## 셀렉트 박스 커스텀, tailwindcss, bootstrap
+### 셀렉트 박스 커스텀, tailwindcss, bootstrap
 
 <br/>
 
-### 16-18 일차 까지 한번에 업로드한 이유는 실습과 과제의 비중이 크기 때문에 과제는 Brushup 레파지토리에 올렸고 기본사용법과 개념등이기 때문
+## 16-18 일차 까지 한번에 업로드한 이유는 실습과 과제의 비중이 크기 때문에 과제는 Brushup 레파지토리에 올렸고 기본사용법과 개념등이기 때문
 
 <br/>
 
@@ -387,11 +387,11 @@ css 에서 transform 의 심화 과정 느낌이 들었는데   transform: rotat
 
 <br/>
 
-### 19일차
+## 19일차
 
 <br/>
 
-## sass / scss 
+### sass / scss 
 
 <br/>
 
@@ -464,13 +464,13 @@ mixin 같은 기능들은 직관적으로 어렵지 않아서 적응하면 좀�
 <br/>
 
 
-### 20일차
+## 20일차
 
 
 <br/>
 <br/>
 
-## scss , 반응형 이미지와 반응형 동영상.
+### scss , 반응형 이미지와 반응형 동영상.
 
 <br/>
 
@@ -625,7 +625,7 @@ $normal-font-size: 16px;
 
 <br>
 
-### 21일차 javascript 01
+## 21일차 javascript 01
 
 <br>
 
@@ -645,7 +645,7 @@ $normal-font-size: 16px;
 
 <br>
 
-### 22일차
+## 22일차
 
 <br>
 
@@ -706,7 +706,7 @@ for (let i = 0; i < text.length; i ++){
 <br>
 <br>
 
-### 23일차
+## 23일차
 
 <br>
 <br>
@@ -771,7 +771,7 @@ for (let i = 0; i < text.length; i ++){
 
 
 
-### 24일차
+## 24일차
 
 <br>
 
@@ -823,7 +823,7 @@ _3. 문자열  뒤집기 문제- 배열을 reverse 와 for 문을 이용해서 �
 
 
  
-### 25일차
+## 25일차
 
 <br>
 
@@ -1091,7 +1091,7 @@ let data = [{                                         // 오브젝트를 배열�
 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
-### 26일차
+## 26일차
 	
 <br>
 
@@ -1201,7 +1201,7 @@ let data = [{                                         // 오브젝트를 배열�
 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------	
 
-### 27일차
+## 27일차
 
 <br>
 
@@ -1286,3 +1286,90 @@ let data = [{                                         // 오브젝트를 배열�
 <br>
 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 28일차
+
+<br>
+
+### 콜백지옥, promise, fetch
+
+<br>
+<br>
+
+* 콜백지옥은 콜백함수를 익명함수로 반복 호출하고 수가 많아 지면서 코드의 들여쓰기가 읽기 힘들정도로 되는것이며 가독성과 수정 유지보수가 힘들다.
+* 콜백 지옥은 주로 서버 통신과 이벤트 처리같은 비동기적인 작업할때 자주 만들어지게 된다.
+	* 예시 ) 콜백함수 안에 또다시 콜백함수 또다시 콜백함수...... 지옥
+<pre>
+userData.login(
+      id,
+      pw,
+      (userID) => {
+        userData.getUserDataSet(
+          userID,
+         (userBasicInfo) => {
+          // grade에 따른 콜백을 하나 더 넣어줄 수 있습니다.
+            console.log(userBasicInfo);
+        },
+        (실패) => {
+          console.log(실패);
+         }
+        )
+      },
+      (실패) => {
+        console.log(실패);
+      }
+    )
+</pre>
+
+### 콜백지옥 벗어나기.
+
+* 콜백지옥에서 벗어나기 위해서 비동기 처리에 사용되는 객체 Promise 를 사용한다.
+* 프로미스는 상태를 갖는다. (fulfilled(성공)상태면 resolve()실행, rejected(실패)면 reject()실행)
+* 프로미스를 사용한 코드.
+
+<pre>
+        class GetUserData {
+            login(아이디, 비밀번호) {
+                return new Promise((resolve, reject) => {
+                    const data = userdb.find(user => user.id === 아이디 && user.pw === 비밀번호);
+                    if (data){
+                        resolve(아이디);
+                    } else {
+                        reject(new Error('로그인 실패!'));
+                    }
+                });
+            }
+            getUserDataSet(이용자) {
+                return new Promise((resolve, reject) => {
+                    const data = userdb.find(user => user.id === 이용자);
+                    if (data) {
+                        resolve({
+                            id : data.id,
+                            picture : data.picture,
+                            name : data.name,
+                            company : data.company,
+                            email : data.email,
+                            grade : data.grade
+                        });
+                    } else {
+                        reject(new Error('데이터 베이스 로드 실패!'));
+                    }
+                });
+            }
+        }
+
+        const userData = new GetUserData();
+        const id = 'hojun';
+        const pw = '1234';
+        userData
+            .login(id, pw)
+            .then(user => userData.getUserDataSet(user)) 
+            .then(user => console.log(user))
+            // 약간 어거지지만ㅎㅎ
+            // .then(비밀번호 변경 안했어?) // 비밀번호 변경
+            // .then(프로모션 받은 적 없어?) // 프로모션
+            // .then(쿠폰 발급받을 시간이야.) // 쿠폰
+            // .then( ..... ) // .... 뭔가 더 ...
+            .catch(console.log);
+    </script>
+</pre>
