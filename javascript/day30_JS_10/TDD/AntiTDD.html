@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이렇게 하면안되다.</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+      article {
+        display: inline-block;
+        border: 3px solid black;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      
+      .viewer {
+        display: block;
+        font-size: 24px;
+        color: green;
+        margin: 50px 0 50px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <article>
+      <strong class="viewer"></strong>
+      <input type="text" class="inp-txt">
+      <button class="btn-push" onclick="push()">적용</button> 
+      <!-- html 안에 js 가 들어가면 테스트 하기가 힘들다. -->
+    </article>
+    <script>
+      // 전역 변수가 사용되고 있다.
+      let txt = "Hello Lions"
+
+      // 함수가 아닌건 테스트를 할수 없다.
+      const viewer = document.querySelector('.viewer'); // 클래스 viewer 를 상수로 담는다.
+      viewer.textContent = txt;  // viewer 의 텍스는 = 변수로 담은 "Hello Lions"
+
+      // 함수는 재사용성이 좋아야 하는데 클래스로 지정해줘서 해당 클래스 또는 해당클래스가 없으면 사용할수없다.(하드코딩)
+      function push() { 
+          const inpTxt = document.querySelector('.inp-txt');
+          viewer.textContent = inpTxt.value;
+      }
+      // 테스트가 가능하려면!!
+      // 1. 코드를 UI 에서 완전히 분리해야 한다.
+      // 2. 자바스크립트를 JS 파일로 분리한다.
+      // 3. 모든 기능은 함수로 구현해야 한다.
+    </script>
+</body>
+</html>

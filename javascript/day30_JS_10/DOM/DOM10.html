@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+  <article class="parent">
+      <ol>
+          <li><button class="btn-first" type="button">버튼1</button></li>
+          <li><button type="button">버튼2</button></li>
+          <li><button type="button">버튼3</button></li>
+      </ol>
+  </article>
+  
+  <script>
+      const parent = document.querySelector('.parent');
+      // parent.addEventListener('click', function (event) {
+      //     console.log(this);
+      // })
+
+
+      // 화살표 함수로 this 를 찍으면 window가 찍히게 된다. 
+      // 전역공간에 있기때문에 
+      // 일반 함수로 사용해야 함수안에 this가 해당 함수를 찹조 하기때문에 
+      // this를 사용한 목적대로 원하는 값을 얻을수 있다.
+      parent.addEventListener('click', (event) => {
+          console.log(this);
+      })
+     
+     
+  </script>
+
+</body>
+</html>
