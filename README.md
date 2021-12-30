@@ -1373,3 +1373,174 @@ userData.login(
             .catch(console.log);
     </script>
 </pre>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 29일차
+
+<br>
+
+### jQuery, ajax 
+
+<br>
+<br>
+
+제이쿼리(jQuery) 기본 실습 내용
+
+<br>
+
+* [테스트 페이지 이동 ](https://chry8822.github.io/like_lion_daily/javascript/day29_JS_09/jQuery.html)
+
+<br>
+
+* 제이쿼리로 기본적인 사용법 익혀보기.
+
+<pre>
+    $("#one").text("hello jQuery");  // 아이디 클래스에 텍스트 바꾸기.
+    //$("p").hide();  // 태그 엘리먼트 숨기기.
+    $(".btn1").click(function () {
+
+      alert(`"you"ve been clicked`);
+    });
+    // 클릭이벤트로 alert 를 띄울수 있다.
+
+    $(".learn").html("<strong>learning</strong>");
+    //태그를 추가해서 넣을수도 있다.
+
+    $(".learn1").css("color", "red");
+    // 스타일 변경하기 텍스트 컬러 변경
+
+    $("a").css("textDecoration", "none");
+    // a 태그에 밑줄 없애기
+
+    $("img").attr("src", "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201608/04/htm_2016080484837486184.jpg");
+    // img 에 src , 이미지링크 또는 이미지 추가 가능
+    $("img").attr("data-name", "profile").attr("data-hello", "world");
+    //
+
+    $(".btn2").click(function () {
+      let memoVal = $("#memo").val(); //변수에 textarea 의 벨류값을 담아주고
+      $("#memo").val("input text");   //textarea 의 기본 벨류값을 변경
+      alert(memoVal);                 //작성한 벨류값을 alert 로 띄어준다. 
+    });
+
+    $("#p3").css("color", "royalblue").css("backgroundColor", "yellow")
+
+    $(".items").parent().css("backgroundColor", "blue");
+    //   1. items 부모를 찾아 backgroundColor 를 파란색으로 바꾸기.
+    $(".items:nth-child(2)").css("color", "red");
+    //   2. items 2번째 색을 빨간색으로 바꾸기.
+    $(".ul2 li:nth-child(-n+3)").css("color", "green");
+    //  3. ul2의 자식인 li 요소를 선택하여 1번부터 3번까지 컬러를 녹색으로 바꾸기.
+    $(".ul2 li:nth-child(n+8):nth-child(-n+10)").css("color", "blue").css("backgroundColor", "red");
+    // 4. ul2의 자식인 li 요소를 선택하여 7번부터 10번까지 컬러를 파란색, backgroundColor를 빨간색으로 바꾸기.
+    $("ul").append("<\li> hello world end <\li>");
+    // 객체를 선택한 객체(p)내의 가장 마지막 요소로 붙인다.
+    $(".ul2").prepend("<\li> hello world first <\li>");  // 마크다운이 리스트로 인식해서 역슬래쉬로 바꿔줌
+    // 객체를 선택한 객체(p)내의 가장 첫번째 요소로 붙인다.
+
+    $("#div1").remove();
+    // 해당 아이디를 가진 요소 삭제
+    $("#div11").addClass("impo");
+    // 해당 아이디를 가진곳에 클래스 추가
+    $(".one, .two").removeClass("blue");
+    // 해당 클래스에 클래스 삭제
+    $(".three").toggleClass("blue");
+</pre>
+
+<br>
+
+* 제이쿼리로 이벤트, 애니메이션 효과 주기
+
+<pre>
+    // dom 이 준비되면 실행해라!
+
+    $(function () {
+      $(".box").click(function () {
+        $(this).hide();
+
+      })
+    });
+    // 클릭이벤트 박스를 사라지게 하기.
+
+    $('.btn3').click(function () {
+      $('.box2').animate({
+        width: '300px',
+        height: '300px',
+        opacity: 1,
+      }, 'slow');
+    });
+    // 클릭이벤트로(버튼 .btn3)클릭시 애니메이션 적용해보기
+
+    $(".box2").hover(function () {
+      $(this).css("background-color", "yellow");
+    }, function () {
+      $(this).css("background-color", "blue");
+    });
+    // (버튼 .btn3)호버시 컬러변경 적용해보기 호버에서 벗어났을때 blue
+
+    $(".box2").mouseenter(function () {
+      alert("You entered p1!");
+    });
+    // 마우스가 해당 요소안으로 들어가면 작동
+    $(".box2").mouseleave(function () {
+      alert("Bye! You now leaved p1!");
+    });
+    // 마우스가 해당 요소밖으로 나가면 작동
+
+</pre>
+
+
+<br>
+<br>
+
+### 로그인 만들기 (ajax 데이터 불러오기)
+
+* [로그인 페이지 ](https://chry8822.github.io/like_lion_daily/javascript/day29_JS_09/ajax%EC%8B%A4%EC%8A%B5%EA%B3%BC%EC%A0%9C.html)
+
+<br>
+아이디: chrys
+<br>
+비밀번호: 1234
+
+<pre>
+   $('.modal').hide(); // 모달창은 로그인 성공후 나오므로 숨김으로 나두고
+    let id;             // 필요한 값들을 변수로 선언해놓는다. 
+    let pw;
+    let userdata;
+    function 실패() {
+      alert('로그인 실패')
+    } 
+
+    $('.dataLoadButton').click(function () {
+      id = $('.id').val()  // 선언된 변수에 사용자가 입력한 값이 들어간다.
+      pw = $('.pw').val()
+      $('.id').val('')     // 입력값을 스트링을 받는다.
+      $('.pw').val('')
+      $.ajax({
+        url: 'https://raw.githubusercontent.com/chry8822/ajaxLoginTest/main/userData.json',
+        async: true,
+        success: function (result) { // 데이터를 성공적으로 불러오면
+          // console.log(result);
+          userdata = JSON.parse(result) // 결과를 제이슨형식으로 변수에 담고
+          // console.log(userdata);
+          let data = userdata.find(user => user.id === id && user.pw === pw);
+          if (data) {                   // 데이터에서 입력된값과 같은 데이터를 찾는다.
+            alert('누구누구님 환영합니다.당신이 가진 멋사코인은 100억원(당장 현금으로 교환 가능)입니다.등급은 다이아몬드입니다.')       
+            $('input, button').hide({ fadeDuration: 250});  
+            $('.modal').show({ fadeDuration: 250});
+            $('.modal').click(function() {$('.modal').hide({ fadeDuration: 250})});
+            // 같은 데이터를 찾으면 로그인창이 사라지고 모달창이 나타난다. 
+            // 그리고 모당창을 클릭하면 다시 모달창이 사라지고
+
+          } else {            
+            실패(new Error('로그인 실패!'))
+        }
+        $('.modal').click(function() {$('input, button').show({ fadeDuration: 250});});
+            // 로그인창이 나타난다.
+      }
+      });
+     });
+</pre>
+
