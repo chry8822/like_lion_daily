@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+
+
+    <script>
+      var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+      var request = new XMLHttpRequest();
+      request.open('GET', requestURL);   // 백엔드에서 클라이언트로 요청응답을 준다.
+      request.responseType = 'json';     // CORS 에서 에러가 난다면 서버에서 허용을 하지 않으면 리소스를 불러올수없다
+      request.send();
+
+      request.onload = function() {
+      var superHeroes = request.response;
+      console.log(superHeroes);
+      }
+    </script>
+</body>
+</html>

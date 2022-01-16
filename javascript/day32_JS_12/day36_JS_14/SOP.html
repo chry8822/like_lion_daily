@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+  <h1>hello! SOP!!</h1>
+  <iframe class="sameOrigin" width="100%"  src="sameOrigin.html" frameborder="0"></iframe>
+    <iframe class="youtube" width="100%" height="700" src="https://www.youtube.com/embed/nW5vL44D7Bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <script>
+        const pageOther = document.querySelector('.youtube')
+        const pageSame = document.querySelector('.sameOrigin')
+
+         pageOther.onload = function () {  // 다른 출처에 리소스 즉 html 문서를 불러올수 없다 null
+           console.log("pageOther :",pageOther.contentDocument);
+          }
+
+         pageSame.onload = function () {   // 출처가 같기 때문에 문서에 접근하고 상호작용이 가능하다. 
+           console.log("pageSame :",pageSame.contentDocument);
+           pageSame.contentDocument.body.style.backgroundColor = "royalblue";
+          }
+
+    </script>
+</body>
+</html>
