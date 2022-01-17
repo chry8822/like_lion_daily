@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../reset.css">
+    <style></style>
+</head>
+<body>
+    <script>
+        var me = { age: 30 }; // 참조 카운팅 1개 me 가 객체를 (참조한다 바라본다)
+        var you = me;         // 참조 카운팅 2개 (한 객체에 대한 참조는 2개(you와 me 가 바라본다 참조한다.))
+        me = null;            // 참조 카운팅 1개. you 만 { age:30 } 을 바라보고있다.
+        you = null;           // 참조 카운팅 0개  { age:30 } 이객체는 이제 아무도 참조 하지 않는다.
+
+        // 그럼 아무도 참지 하지않는 데이터는 garbage collector 가 데이터를 수거해간다.(메모리에서 없어짐.)
+    </script>
+
+    <!-- 두번째 케이스 -->
+    <script>
+        var x = {
+            y: {
+                z: 1
+            }
+        };
+        // x 가 참조하는 객체를 object1, 
+        // y 가 참조하는 객체를 object2.
+
+        var a = x;  // object1 객체의 참조 카운트 : 2개 (x,a 가 참조중.)
+        x = 1;      // object1 객체의 참조 카운트 : 1개 (a 만 참조중.)
+
+        var b = a.y; // object2 객체의 참조 카운트: 2개 (y, b)
+        a = 2;       // object1 객체의 참조 카운트: 0개 (아무도 참조하지 않음)
+        // 아무도 참조 하지않지만 b가 object1 안의 있는 객체를 참조하고 있기때문에 
+        // gabege collector를 실행하지 않는다.
+        // 이렇게 더이상 사용하지 않지만 메모리에 불필요하게 남아있는 객체가 있을 경우 메모리 누수(leak)가 발생했다고 한다. 
+
+    </script>
+</body>
+</html>

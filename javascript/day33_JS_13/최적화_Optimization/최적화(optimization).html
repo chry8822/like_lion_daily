@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <!-- css, js minify 로 최적화해서 로딩되는 시간을 줄여준다.
+         공백들도 코드로 판단하기때문에 불필요한 공백들을 없애준다, -->
+    <!-- 
+        1. JS 보다는 CSS 애니메이션을 활용합니다. 
+          - JS로 스타일을 수정해도 결국 CSS 속성으로 업데이트 됩니다.
+        2. Transform 속성을 사용합니다. - 브라우저가 GPU 가속능력을 사용한다.
+        CUP의 연산 부담을 덜어서 속도가 더 빠르다.
+        3. repaint, reflow 를 유발하는 속성은 되도록 사용하지 않습니다.
+        4. requestAnimationFrame 을 사용합니다. 
+            - 브라우저가 애니메이션을 최적화 하도록 하고, 비 활성 탭에서는 애니메이션이 동작하지 않도록 합니다.
+        5. DOM 접근과 업데이트는 가능한 적게 합니다.
+            - DOM 접근은 가능한 좁은 범위에서 적게 사용합니다.
+            - Document fragment 를 사용해서 한번에 DOM을 업데이트합니다.
+     -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+      body {
+        margin: 100px;
+        
+      }
+      .target {
+        width: 50px;
+        height: 50px;
+        background-color: tomato;
+        /* transition: all 0.2s; */
+      }
+    </style>
+</head>
+<body>
+    <div class="target"></div>
+    <script>
+      const target = document.querySelector('.target');
+      let pos = 0;
+      let keys = {}; // 우리가 어떤키를 눌렀는지 때는지 알수있는 객체
+
+      document.addEventListener('keydown', move);
+      document.addEventListener('keyup', stop);
+
+      function move(event) {
+        keys [event.key] = true;
+      }
+
+      function stop(event) { 
+        keys [event.key] = false;
+      }
+
+      function play() {
+        if(keys.Enter) {
+            pos = 0;
+            target.style.transform = `translateX(${pos}px)`
+        }
+        if(keys.ArrowRight) {
+            pos += 5;
+            target.style.transform = `translateX(${pos}px)`
+        }
+        if(keys.ArrowLeft) {
+            pos -= 5;
+            target.style.transform = `translateX(${pos}px)`
+        }
+        if(keys.ArrowDown) {
+            pos += 5;
+            target.style.transform = `translatey(${pos}px)`
+        }
+        if(keys.ArrowUp) {
+            pos -= 5;
+            target.style.transform = `translatey(${pos}px)`
+        }
+        window.requestAnimationFrame(play);
+      }
+
+      window.requestAnimationFrame(play); 
+      // 브라우저가 애니메이션을 최적화 하도록 하고, 비 활성 탭에서는 애니메이션이 동작하지 않도록 합니다.
+
+      function test () {
+          console.log('play');
+          
+      }
+
+
+                                        //리스너 함수 (이벤트 객체를 넘겨준다.)
+
+      // function move(event) {            //이렇게 만들면 키보드를 누를시 움직이지만 답답하다.
+      //     console.log(event.key)
+      //     const keyName = event.key;   
+      //     if(keyName === 'Enter'){
+      //       pos = 0;
+      //       target.style.transform = `translateX(${pos}px)`
+      //     }
+      //     if(keyName === 'ArrowRight') {
+      //       pos += 10;
+      //         target.style.transform = `translateX(${pos}px)`
+      //     }
+      //     if(keyName === 'ArrowLeft') {
+      //        pos -= 10;
+      //          target.style.transform = `translateX(${pos}px)`
+      //     }
+
+      // }
+    </script>
+</body>
+</html>
